@@ -2,9 +2,9 @@
 title: Notes
 description: Repository for research notes
 ---
-## Welcome
+## Index of Knowledge
 
-Browse by topic:
+Browse by domain:
 
 - [[A Glossary of Protoplanetary Disks]]
 - [[At the Fringes of Planet Formation]]

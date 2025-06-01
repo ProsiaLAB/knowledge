@@ -3,14 +3,14 @@ tags:
   - physical-structure
   - planet-formation
 ---
-As mentioned earlier, density structure is one of the first and primary inputs for the model. The density profiles are inspired by Lyndell-Bell and Pringle for disks, and Ulrich for [[knowledge/Planet Formation At Large/Disk Envelopes|envelopes]].
+As mentioned earlier, density structure is one of the first and primary inputs for the model. The density profiles are inspired by Lyndell-Bell and Pringle for disks, and Ulrich for [[Disk Envelopes|envelopes]].
 
 For envelopes, the model allows for the use of a simple radial profile of gas density given by:
 $$
 \rho_g (R) = \rho_g (R_c) \left( \dfrac{R}{R_c} \right)^{-\beta}
 $$
 
-where $R$ is the radial co-ordinate in the spherical co-ordinate system, $R_c$ is the [[knowledge/The Observation Toolkit/Characteristic Radius|characteristic radius]] at which one has the density known and $\beta$ is the radial power law exponent for envelope density. 
+where $R$ is the radial co-ordinate in the spherical co-ordinate system, $R_c$ is the [[Characteristic Radius|characteristic radius]] at which one has the density known and $\beta$ is the radial power law exponent for envelope density. 
 
 The model also has the option of choosing a more physical envelope gas density structure, which is
 derived from an in-falling rotating envelope model, given by:
