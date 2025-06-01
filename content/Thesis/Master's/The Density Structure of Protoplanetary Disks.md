@@ -1,0 +1,21 @@
+---
+tags:
+  - physical-structure
+---
+For disks, the gas surface density is derived from the parametric profile suggested by Lyndell-Bell and Pringle, which holds for a disk that has attained hydrostatic equilibrium:
+$$\Sigma_g (r) = \Sigma_g (r_{\text{ref}}) \left( \dfrac{r}{r_{\text{ref}}} \right)^{-\gamma}$$
+
+An additional exponential tapering term is also added in some cases, to obtain a better fit with observations:
+$$\Sigma_g (r) = \Sigma_g (r_{\text{ref}}) \left( \dfrac{r}{r_{\text{ref}}} \right)^{-\gamma} \exp \left[ - \left( \dfrac{r}{r_{\text{ref}}} \right)^{2-\gamma} \right]$$
+where $r_{\text{ref}}$ is the reference or [[knowledge/The Observation Toolkit/Characteristic Radius|characteristic radius]] where some quantities are known and $\gamma$ is the power law exponent for the surface density profile.
+To model disks for which we have no constrained value for the gas surface density at a reference radius, we can use the total gas mass of the disk, $M_g$ (another quantity that can be constrained from observations), and invert the following relation to obtain the surface density at the reference radius:
+$$\begin{equation} \begin{split} M_g &= \int_{r_{\text{in}}}^{r_{\text{out}}} \Sigma_g (r) rdrd\theta \\ \implies \Sigma_g(r_{\text{ref}}) &= \dfrac{(2-\gamma)M_g}{2 \pi r_{\text{ref}}^2} \left[e^{-\left(\frac{r_{\text{in}}}{r_{\text{ref}}}\right)^{2-\gamma}} - e^{-\left(\frac{r_{\text{out}}}{r_{\text{ref}}}\right)^{2-\gamma}}\right]^{-1} \end{split}\end{equation}$$
+and when we have an exponential taper:
+$$\Sigma_g(r_{\text{ref}}) = \dfrac{(2-\gamma)M_g}{2 \pi r_{\text{ref}}^2} \left[r_{\text{out}}^{2-\gamma} - r_{\text{in}}^{2-\gamma}\right]^{-1}$$ Another important parameter that we require to model the disks is the [[knowledge/The Observation Toolkit/Scale Height|scale height]] of gas, $H(r)$, which is defined as the local speed of sound to the Keplerian angular velocity of the disk:
+$$H(r) = \dfrac{c_s}{\Omega}$$ where $\Omega$ is the Keplerian velocity of the disk given by:
+$$\Omega = \sqrt{\dfrac{G M_{\star}}{(r^2 + z^2 )^{3/2}}}$$ $c_s$ is the *isothermal* speed of sound given by:
+$$c_s = \sqrt{\dfrac{k_{B} T_g}{\mu m_p}}$$ where $\mu$ is the mean molecular mass of the gas and $m_p$ is the mass of the proton, giving us:
+$$H (r) = \sqrt{ \dfrac{k_B T_g(r) (r^2 + z^2)^{3/2}}{\mu GM_{\star}}}$$The scale height is a measure of the amount of [[knowledge/A Glossary of Protoplanetary Disks/Flaring in the disks|flaring in the disks]], i.e. how much the disk rise in altitude from the mid-plane, with increasing radius. If the scale height is known at the [[knowledge/The Observation Toolkit/Characteristic Radius|reference radius]], or the gas mid-plane temperature is known at the reference radius which can be used to calculate the scale height using the above expression, one can scale the scale height for other radii too using a simple power-law:
+$$H(r) = H(r_{\text{ref}})\left(\dfrac{r}{r_{\text{ref}}}\right)^{\psi}$$ with $\psi$ being the [[knowledge/A Glossary of Protoplanetary Disks/Flaring in the disks#Flaring parameter|flaring parameter]].
+
+But there is always something more to the story.
