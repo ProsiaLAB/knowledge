@@ -59,4 +59,36 @@ $$
 \end{cases}
 $$
 
-which just filters the radial points which are out of bounds of the disk inner and outer edges. Now, we need to discuss something called the *truncated power law* distributions. They are also called as power laws with exponential cutoff. 
+which just filters the radial points which are out of bounds of the disk inner and outer edges. Now, we need to discuss something called the *truncated power law* distributions. They are also called as power laws with exponential cutoff. A power law with an exponential cutoff is simply a power law multiplied by an exponential function:
+
+$$
+f(x) = x^{-\alpha}e^{-\beta x}
+$$
+
+Given this, let us define following two power laws:
+
+$$
+p_1 = \exp \left(- \dfrac{r_{\text{in}}}{r_{\text{c}}} \right)^{2-\gamma}
+$$
+and
+
+$$
+p_2 = \exp \left(- \dfrac{r_{\text{out}}}{r_{\text{out}}} \right)^{2-\gamma}
+$$
+
+and then
+
+$$
+\Sigma_c = \dfrac{(2.0 - \gamma) M_d}{2\pi r_c^2 (p_1 - p_2)}
+$$
+
+Further, if the radial point is less than the flattening parameter for inner edge,
+
+$$
+r_c = 
+\begin{cases}
+\dfrac{r_{\text{in}}^{\text{flat}}}{r_c} & \text{if } r < r_{\text{in}}^{\text{flat}} \\
+\dfrac{r}{r_c}, & \text{otherwise}
+\end{cases}
+$$
+
