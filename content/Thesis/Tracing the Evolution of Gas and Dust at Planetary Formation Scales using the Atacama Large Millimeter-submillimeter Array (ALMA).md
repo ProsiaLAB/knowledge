@@ -18,7 +18,7 @@
 *And all of space I seem to see*  
 *In one vast burst of sight*"
 >
->— Isaac Asimov
+>**Isaac Asimov**
 ## Origins of Planetary Systems
 
 Up until the 1990s, the only planetary system known was our own solar system and incidentally all theories *on* planet formation were primarily derived from its geophysical study [see @Brush1990 and references therein]. Things changed in 1990s after the discovery of the first exoplanet by @Wolszczan1992, shortly followed by the discovery of the hot Jupiter[^1] *51 Pegasi b*, the first exoplanet to be discovered orbiting a main-sequence star [@Mayor1995], and it was established that planetary systems are far more common that previously thought.
@@ -58,7 +58,7 @@ Protplanetary disks are the cradle of planetary systems. Understanding the evolu
 >[!quote]
 >*"The scientific process has two motives: one is to understand the natural world, the other is to control it."*
 >
->— C. P. Snow
+>**C. P. Snow**
 
 Historically, the models used to study disks have been majorly of two types, with each having its own specialization. The first kind is the continuum or dust radiative transfer models like `RADMC3D` [@Dullemond2004], `MCFOST` [@Pinte2006] and `MCMax` [@Min2009] which specialize in performing a simulation to obtain (and later constrain) parameters like disk shape, dust temperature, dust-grain species (and their populations), radiation field and so on. The second is the chemical, or in some cases, thermo-chemical models, which include chemistry in varying degrees of complexity, along with UV and X-ray ionization, to explore the chemical properties of the gas and its temperature, with more emphasis on the outer-disk (less dense) regions of the disk as they can be traced by the (sub-) mm line observations.
 
@@ -160,7 +160,7 @@ The superscripts $c$ and $l$ refer to continuum and line emissivity functions an
 >[!quote]
 >*"Measure what can be measured, and make measureable what cannot be measured"*
 >
->— Galileo Galilei
+>**Galileo Galilei**
 
 ## The Density Profile
 
@@ -205,7 +205,6 @@ T_{\text{atm}}
 & \text{if $ z \geq z_q $}
 \end{cases}
 \end{equation}
-\tag{1}\label{s4}
 $$
 ## Hydrostatic Disk Structure
 
@@ -248,35 +247,51 @@ The settling plays an important part in finding a converged physical structure o
 
 ## Continuum Radiative Transfer
 
-Once we have setup the dust in our model, we can now create a grid which will be the stage for the simulation of our disk. Note that that equations  [\[eq:1\]](#eq:1){reference-type="ref" reference="eq:1"}--[\[eq:5\]](#eq:5){reference-type="ref" reference="eq:5"} are for gas, but as already states dust follows the gas, with 1% of its abundance. The choice of the grid is extremely important, as the this grid is going to be used to simulated photon transport in a medium. As our disk is axisymmetric, it is enough to model one quadrant in 2 dimensions, with the source of photons (that is, the host star) athe origin. Many models often use a normal polar or cartesian grid but these density distribution require a finer (or adaptive) treatment where the grid scales accordingly (finer in dense regions and sparse in regions with low density). Therefore, as alread described, we adopt a tree-based grid, which allows us to employ an adpative resolution and easy to program ray propagation along the grid. This grid also allows a more accurate treatment of calculation of observables as we are not bound under the assumption of light/radiation propagating in a straight line, rather we can propagate an actual physical ray through our grid and any integrations along the ray path will be more closer to reality.
+Once we have setup the dust in our model, we can now create a grid which will be the stage for the simulation of our disk. Note that that equations  ![!insert ref] are for gas, but as already states dust follows the gas, with 1% of its abundance. The choice of the grid is extremely important, as the this grid is going to be used to simulated photon transport in a medium. As our disk is axisymmetric, it is enough to model one quadrant in 2 dimensions, with the source of photons (that is, the host star) athe origin. Many models often use a normal polar or cartesian grid but these density distribution require a finer (or adaptive) treatment where the grid scales accordingly (finer in dense regions and sparse in regions with low density). Therefore, as already described, we adopt a tree-based grid, which allows us to employ an adaptive resolution and easy to program ray propagation along the grid. This grid also allows a more accurate treatment of calculation of observables as we are not bound under the assumption of light/radiation propagating in a straight line, rather we can propagate an actual physical ray through our grid and any integrations along the ray path will be more closer to reality.
 
 ### Monte Carlo based photon transport
 
 The central star emits photons photons and they propagate through the disk where we only assume dust to be present (only for the radiative transfer run). The fundamental concept involves partitioning the luminosity of the radiation source into equally energetic, monochromatic photon packets. These packets are emitted in a stochastic manner by the source and are subsequently tracked to random interaction locations determined by the optical depth. At these locations, the packets undergo either scattering or absorption, the likelihood of which is dictated by the albedo. In the case of scattering, a random scattering angle is derived from the scattering phase function (differential cross-section). These is the same Monte Carlo based dust radiative transfer strategy described in @bjorkman2001radiative.
 
-Let the stellar luminosity be $L$ which we divide into $N_{\gamma}$ photon packets each with energy $E_{\gamma}$ giving $$E_{\gamma} = \dfrac{L \Delta t}{N_{\gamma}}$$ Upon injection into the disk (grid), the monochromatic photon packet will be assigned a frequency at random, selected from the spectral energy distribution (SED) of the source. The dust we have setup in our disk can now scatter, absorb or reemit the incoming radiation. All of these processes require us to have the opacity of the dust in our model, which depends on its composition. We have considered graphite based and astronomical silicates but we optical data for other dusts like pyroxenes as well. All of this data is taken from @draine1984optical. The frequency of the incoming photon packet in a grid cell determines the corresponding opacity. If a packet is absorbed in the cell, we deposit its energy (given by $E^{\text{abs}}_i = N_i E_{\gamma}$ where $N$ is the number of packets absorbed by that cell $i$) to the cell and recalculate the cell's temperature. As the cell is assumed to be in local thermodynamics equilibrium, the absorbed energy must also be reemitted. The emissivity of dust can be written as $$\label{eq:mc1}
-    j_\nu = \kappa_\nu \rho B_\nu (T)$$ where $\rho$ is density of the cell and $B_\nu (T)$ is the Planck's function at temperature $T$. Therefore, we can write the emitted energy as: $$\label{eq:mc2}
+Let the stellar luminosity be $L$ which we divide into $N_{\gamma}$ photon packets each with energy $E_{\gamma}$ giving $$E_{\gamma} = \dfrac{L \Delta t}{N_{\gamma}}$$ Upon injection into the disk (grid), the monochromatic photon packet will be assigned a frequency at random, selected from the spectral energy distribution (SED) of the source. The dust we have setup in our disk can now scatter, absorb or reemit the incoming radiation. All of these processes require us to have the opacity of the dust in our model, which depends on its composition. We have considered graphite based and astronomical silicates but we optical data for other dusts like pyroxenes as well. All of this data is taken from @draine1984optical. The frequency of the incoming photon packet in a grid cell determines the corresponding opacity. If a packet is absorbed in the cell, we deposit its energy (given by $E^{\text{abs}}_i = N_i E_{\gamma}$ where $N$ is the number of packets absorbed by that cell $i$) to the cell and recalculate the cell's temperature. As the cell is assumed to be in local thermodynamics equilibrium, the absorbed energy must also be reemitted. The emissivity of dust can be written as 
+$$
+j_\nu = \kappa_\nu \rho B_\nu (T)
+$$
+where $\rho$ is density of the cell and $B_\nu (T)$ is the Planck's function at temperature $T$. Therefore, we can write the emitted energy as: 
+$$
     \begin{split}
         E^{\text{em}}_i &= 4 \pi \Delta t \int dV_i \int
         \rho \kappa_\nu B_\nu (T) d\nu \\
         &=  4 \pi \Delta t \int \kappa_P (T) B(T) \rho dV_i
-    \end{split}$$ where $\kappa_P (T)$ is the Planck mean opacity given by $$\label{eq:mc3}
-    \kappa_P (T) = \int \dfrac{\kappa_\nu B_\nu d\nu}{B}$$ with $B = \sigma T^4 /\pi$ being the integrated Planck function. If cell $i$ had temperature $T_i$ we can write $$\label{eq:mc4}
-    E^{\text{em}}_i = 4\pi \Delta t \kappa_P (T_i) B(T_i) m_i$$ where $m_i$ is the mass of the cell. Finally, equating [\[eq:mc4\]](#eq:mc4){reference-type="ref" reference="eq:mc4"} to the energy absorbed by the cell, we get $$\sigma T_i^4 = \dfrac{N_i L}{4 N_{\gamma} \kappa_P (T_i) m_i}$$[]{#eq:mc5 label="eq:mc5"} One way to solve equation is through some iterative algorithm but we instead create a look-up table to speed-up calculations for each frequency/wavelength.
+    \end{split}
+$$
+
+where $\kappa_P (T)$ is the Planck mean opacity given by 
+$$
+    \kappa_P (T) = \int \dfrac{\kappa_\nu B_\nu d\nu}{B}
+$$
+with $B = \sigma T^4 /\pi$ being the integrated Planck function. If cell $i$ had temperature $T_i$ we can write 
+$$
+E^{\text{em}}_i = 4\pi \Delta t \kappa_P (T_i) B(T_i) m_i
+$$
+where $m_i$ is the mass of the cell. Finally, equating [\[eq:mc4\]](#eq:mc4){reference-type="ref" reference="eq:mc4"} to the energy absorbed by the cell, we get 
+$$
+\sigma T_i^4 = \dfrac{N_i L}{4 N_{\gamma} \kappa_P (T_i) m_i}
+$$
+[]{#eq:mc5 label="eq:mc5"} One way to solve equation is through some iterative algorithm but we instead create a look-up table to speed-up calculations for each frequency/wavelength.
 
 # Thermochemical Evolution
 
-::: epigraph
-*"Chemistry begins in the stars. The stars are the source of the chemical elements, which are the building blocks of matter and the core of our subject"*
+>[!quote]
+>*"Chemistry begins in the stars. The stars are the source of the chemical elements, which are the building blocks of matter and the core of our subject"*
+>
+>**Peter Atkins**
 
-Peter Atkins
-:::
-
-Once the dust radiative transfer is done, we will have obtained the dust temperature structure as well (see figure [4.1](#fig:dusttemp){reference-type="ref" reference="fig:dusttemp"}). This will serve as the input to the chemistry, along with a set of initial elemental abundances, which are derived from observational constraints on the chemical make-up of the interstellar medium.
+Once the dust radiative transfer is done, we will have obtained the dust temperature structure as well (see figure [4.1]). This will serve as the input to the chemistry, along with a set of initial elemental abundances, which are derived from observational constraints on the chemical make-up of the interstellar medium.
 
 This section describes the various chemical processes and heating and cooling sources we have included in the model.
 
-![The disk gas temperature structure of for a fiducial disk of radius 200 AU. This plot is generated by performing dust radiative transfer, and does not come from a parametric formula](dusttemp.png){#fig:dusttemp}
+![The disk gas temperature structure of for a fiducial disk of radius 200 AU. This plot is generated by performing dust radiative transfer, and does not come from a parametric formula](dusttemp.png)
 
 ## The Essence of Thermochemical Modelling
 
