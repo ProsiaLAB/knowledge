@@ -1,5 +1,0 @@
----
-tags:
-  - physics
-  - physical-structure
----

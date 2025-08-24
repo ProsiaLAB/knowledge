@@ -1,5 +1,0 @@
----
-tags:
-  - planetary-interiors
-  - exoplanets
----

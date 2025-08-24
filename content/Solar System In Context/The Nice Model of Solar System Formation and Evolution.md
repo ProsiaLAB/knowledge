@@ -1,5 +1,0 @@
----
-tags:
-  - solar-system
-  - physics
----

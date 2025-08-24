@@ -1,6 +1,0 @@
----
-tags:
-  - chemistry
-  - physical-structure
----
-

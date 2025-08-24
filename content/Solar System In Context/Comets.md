@@ -1,5 +1,0 @@
----
-tags:
-  - comets
-  - solar-system
----

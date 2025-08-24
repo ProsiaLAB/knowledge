@@ -1,5 +1,0 @@
----
-tags:
-  - physical-structure
-  - observations
----
