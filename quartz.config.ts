@@ -39,17 +39,29 @@ const config: QuartzConfig = {
           highlight: "rgba(143, 159, 169, 0.15)",
           textHighlight: "#fff23688",
         },
+        // darkMode: {
+        //   light: "#161618",
+        //   lightgray: "#393639",
+        //   gray: "#646464",
+        //   darkgray: "#d4d4d4",
+        //   dark: "#ebebec",
+        //   secondary: "#7b97aa",
+        //   tertiary: "#84a59d",
+        //   highlight: "rgba(143, 159, 169, 0.15)",
+        //   textHighlight: "#b3aa0288",
+        // },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#11111b",        // Crust - deepest background
+          lightgray: "#1e1e2e",    // Base - elevated surfaces, cards  
+          gray: "#313244",         // Surface0 - borders, subtle dividers
+          darkgray: "#9399b2",     // Overlay2 - muted text, placeholders
+          dark: "#cdd6f4",         // Text - main readable text
+          secondary: "#89b4fa",    // Blue - primary accent color
+          tertiary: "#94e2d5",     // Teal - supporting accent color
+          highlight: "rgba(6, 18, 39, 0.08)", // Blue with lower opacity for hover/selection
+          textHighlight: "rgba(249, 226, 175, 0.20)", // Peach tint for text highlights
         },
+
       },
     },
   },

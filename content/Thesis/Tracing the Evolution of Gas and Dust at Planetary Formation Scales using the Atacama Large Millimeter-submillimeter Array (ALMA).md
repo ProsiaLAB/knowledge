@@ -56,7 +56,7 @@ Ultimately, the fate of a planetary system is tied to the life cycle of its host
 
 ## Theories of Planet Formation
 
-Planets are diverse and thus are the theories defining their formation. Giant planets which are mainly composed of hydrogen and helium, often dictate the orbital architecture of the planetary systems they form in due to theie sheer size [@DAngelo2018]. Two formation pathways for them have been extensively studied, first being the core accreted nucleation and other other being disk instability. For terrestrial planets, the picture is more uncertain and complex, with a chain of events that leads to formation of pebbles from dust grains, planetesimals from pebbles, planetary embroys from planetesimals and eventually planets from planetary embryos. For our inner solar system itself, there are multiple competeing as well as established theories like the [[The Nice Model of Solar System Formation and Evolution|Nice model]] [@Tsiganis2005]. The role of migration cannot be understated either, with theories like *Grand Tack hypothesis* in the fray [@Izidoro2018].
+Planets are diverse and thus are the theories defining their formation. Giant planets which are mainly composed of hydrogen and helium, often dictate the orbital architecture of the planetary systems they form in due to theie sheer size [@DAngelo2018]. Two formation pathways for them have been extensively studied, first being the core accreted nucleation and other other being disk instability. For terrestrial planets, the picture is more uncertain and complex, with a chain of events that leads to formation of pebbles from dust grains, planetesimals from pebbles, planetary embroys from planetesimals and eventually planets from planetary embryos. For our inner solar system itself, there are multiple competeing as well as established theories like the [[The Nice Model of Solar System Formation and Evolution|Nice model]] [@Tsiganis2005]. The role of [[Planetary Migration|migration]] cannot be understated either, with theories like *Grand Tack hypothesis* in the fray [@Izidoro2018].
 
 ## From Clouds to Disks to Planets
 
@@ -132,7 +132,7 @@ Chemical networks are list of reactions with their respective [[Chemical Kinetic
 
 We have seen that, in all sense, the physical parameters we can constrain for the protoplanetary disks are mostly rooted in understanding their chemical composition. The gas mass of the disk is no exception. The importance of constraining the gas mass is many-fold @trapman2022novel; with the most evident being that the gas is the reservoir that will provide the raw material for gas giant planets to form. As the disk evolves, it loses mass through evaporation of gas and accretion on to the host star. This sets the timeline for formation of those giant planets (see @mordasini2018handbook). The dust component in the disk, although only 1% of the gas, is also crucial, as it is what will form the terrestrial planets. The [[Dust Evolution in Protoplanetary Disks|dust dynamics]] (involving dust growth, settling and inward radial drift) is heavily regulated by the gas content present in the disk @birnstiel2012simple.
 
-However, obtaining an [[How to constrain disk gas mass using chemical tracers?|estimate on disk gas masses]] has been proven to be arduous. Hydrogen molecule ($\ce{H2}$) is the chief constituent of the gas so if we can constrain the abundance of in disks, it will provide an excellent idea on the total gas content. But due to absence of any dipole moment, it does not emit significantly in the temperatures found in the disks ($50-500$ K). We have hydrogen deuteride ($\ce{HD}$), which traces hydrogen gas chemically @trapman2017far, but it emits in far-infrared and currently, due to an absence of a capable far-infrared facility in the post-*Herschel* era, making it virtually impossible to make any observations of it. The next most abundant species in disks is carbon monoxide ($\ce{CO}$) and emissions from its isotopologues have been the subject of study for a plethora of work (see @Zhang2017 [@Booth2019] to name a few).
+However, obtaining an [[How to constrain disk gas mass using chemical tracers?|estimate on disk gas masses]] has been proven to be arduous. Hydrogen molecule $(\text{H}_2)$ is the chief constituent of the gas so if we can constrain the abundance of in disks, it will provide an excellent idea on the total gas content. But due to absence of any dipole moment, it does not emit significantly in the temperatures found in the disks ($50-500$ K). We have hydrogen deuteride ($\ce{HD}$), which traces hydrogen gas chemically @trapman2017far, but it emits in far-infrared and currently, due to an absence of a capable far-infrared facility in the post-*Herschel* era, making it virtually impossible to make any observations of it. The next most abundant species in disks is carbon monoxide ($\ce{CO}$) and emissions from its isotopologues have been the subject of study for a plethora of work (see @Zhang2017 [@Booth2019] to name a few).
 
 Although is assumed to have a relative constant abundance (relative to $\ce{H}$, denoted by $\chi_{\ce{CO}}$) in the warm gas of the disks due to its [[On the chemical stability of Gas-phase Carbon Monoxide|chemical stability]] of around $\chi_{\ce{CO}} \approx 10^{-4}$ @trapman2022novel, it can deplete from the gas due to [[The PDR Layer|photodissociation in the upper layers]] of the disk through irradiation by FUV photons or through [[Ices and Snowlines|freeze out]] the dust grains in deeply [[Shielding of Molecules from Photodissociation|shielded]], cold mid-plane of the disk @vanDishoeck1988 [@vanZadelhoff2001; @Visser2009; @Miotello2014]. These processes have been incorporated in physicochemical models and corresponding gas mass measurements have been made by reconciling the model results with the observations of and line fluxes @Williams2014 [@Miotello2016].
 
@@ -180,6 +180,7 @@ The superscripts $c$ and $l$ refer to continuum and line emissivity functions an
 ## The Density Profile
 
 The physical structure of our model is similar to as described in @Du2014 and @Woitke2009. This disk is assumed to be axisymmetric. We start with a parametrized distribution structure in cylindrical co-ordinates for the gas number density following   [@lynden1974evolution; @Hartmann1998; @Andrews2009; @Cleeves2013] as an observationally constrained equation of the form: 
+
 $$
 \rho (r, z) = \dfrac{\Sigma}{\sqrt{2 \pi} h}
 \exp \left[-\dfrac{1}{2}{\left(\dfrac{z}{h}\right)}^2\right],
@@ -208,6 +209,7 @@ $$
 We begin by taking $M_\text{disk}$ as an input through which we get the value of $\Sigma_c$ to get $\rho (r, z)$.
 
 Further, we follow the gas temperature structure from @Williams2014 given as: 
+
 $$
 \begin{equation}
 T (r, z) =
@@ -221,41 +223,54 @@ T_{\text{atm}}
 \end{cases}
 \end{equation}
 $$
+
 ## Hydrostatic Disk Structure
 
 Our disk is static in the vertical and radial direction but in Keplerian rotation in the azimuthal direction, around the $z$-axis. From the hydrostatic equations: 
+
 $$
 \begin{split}
         \dfrac{v_{\phi}^2}{r} &= \dfrac{1}{\rho} \dfrac{\partial p}{\partial r} + \dfrac{\partial \Phi}{\partial r} \\ 0 &= \dfrac{1}{\rho} \dfrac{\partial p}{\partial z} + \dfrac{\partial \Phi}{\partial z}
     \end{split}
 $$
+
 Here, $v_{\phi}$ is the velocity in along the azimuthal direction and $p$ is the gas thermal pressure, with $\rho$ being density. We neglect self-gravity, which gives the gravitation potential as: 
+
 $$
 \Phi (r, z) = - \dfrac{G M_{\star}}{\sqrt{r^2 + z^2}}
 $$
+
 where $M_{\star}$ is the stellar mass and $G$ is the Newtonian gravitational constant. We assume that the radial and vertical components of equation of motion are independent of each other as the radial pressure gradient ($1 / \rho (\partial p / \partial r)$) is insignificant in comparison to centrifugal acceleration and gravity, allowing us to get the Keplerian velocity of our disk:
+
 $$
 v_{\phi} ={\left[\dfrac{r^2 GM_{\star}}{{(r^2+z^2)}^{3/2}}\right]}^{1/2}
 $$
+
 Getting this velocity is crucial as it is used while doing ray tracing to construct the observables from the modeled disk.
 
 ## Dust Settling
 
 As the disk evolves, the dust grains settle down in the midplane due to gravity. This process is much more apparent for larger grains, and in general the simultaneously ongoing process of dust growth will always lead to settling of these now heavier particles. Eventually, these initiate the formation of planetesimals, and in our context, are extremely important to model because they can trap volatiles like into them. Although our model does not explicitly and self-consistently consider the settling process (like done by @Dullemond2004b [@Dullemond2005]), we replicate the process through two pathways. The first involves decreasing the total dust mass within the disk while maintaining a consistent dust-to-gas mass ratio throughout, and the second entails diminishing the scale height of larger grains. In the second approach, a mixture of small grains with gas is retained, ensuring that the overall dust-to-gas mass ratio aligns with the standard model.
 
-Thi parametric appraoch involves calculation of following dimension-less factor 
+This parametric appraoch involves calculation of following dimension-less factor 
+
 $$
 f_i = \dfrac{G M_{\star} \mu m_p}{2 r^3 k_B T_{\text{gas}}}
     (z_{\text{max}}-z_{\text{mid}})(z_{\text{max}}+z_{\text{mid}})
 $$
+
 where $G$ is the gravitational constant, $M_{\star}$ is the stellar mass $\mu$ is the mean molecular mass of the $i^{th}$ cell, $m_p$ is the proton mass and thus the numerator represents the mass of the cell as it rotated arounds the star at a distance $r$. $k_B$ is the Boltzmann constant and the whole fraction is multiplied by the vertical extent of the cell. Combining them from a pair of neighbouring vertical cells we then calculate
+
 $$
 f = \text{min}\left(e^{-(f_i+f_{i+1})} \dfrac{T_i}{T_{i+1}}, 1.0\right)
 $$
+
 This is calculated for every pair of consecutive cells ($i+1$ being the upper cell) in the vertical direction and the gas number density of the top cell is scaled like 
+
 $$
 n_{i+1} = n_i \cdot f
 $$
+
 An alternative approach is also implemented where the gas thermal pressure is used to calculate the rescaling factor of the gas number density.
 
 The settling plays an important part in finding a converged physical structure of the disk. By convergence, we mean that the $T_{\text{gas}}$ and $T_{\text{dust}}$ for a cell are within some permissible value. As $T_{\text{dust}}$ comes from the Monte-Carlo radiative transfer and $T_{\text{gas}}$, an iterative approach is taken. This iterative approach allows to mimick the spectral energy distribution to suitably high precision. Furthermore, because the radiative transfer is parallelized, this process is preferred over a non-settled and a non-converged physical structure.
@@ -268,7 +283,13 @@ Once we have setup the dust in our model, we can now create a grid which will be
 
 The central star emits photons photons and they propagate through the disk where we only assume dust to be present (only for the radiative transfer run). The fundamental concept involves partitioning the luminosity of the radiation source into equally energetic, monochromatic photon packets. These packets are emitted in a stochastic manner by the source and are subsequently tracked to random interaction locations determined by the optical depth. At these locations, the packets undergo either scattering or absorption, the likelihood of which is dictated by the albedo. In the case of scattering, a random scattering angle is derived from the scattering phase function (differential cross-section). These is the same Monte Carlo based dust radiative transfer strategy described in @bjorkman2001radiative.
 
-Let the stellar luminosity be $L$ which we divide into $N_{\gamma}$ photon packets each with energy $E_{\gamma}$ giving $$E_{\gamma} = \dfrac{L \Delta t}{N_{\gamma}}$$ Upon injection into the disk (grid), the monochromatic photon packet will be assigned a frequency at random, selected from the spectral energy distribution (SED) of the source. The dust we have setup in our disk can now scatter, absorb or reemit the incoming radiation. All of these processes require us to have the opacity of the dust in our model, which depends on its composition. We have considered graphite based and astronomical silicates but we optical data for other dusts like pyroxenes as well. All of this data is taken from @draine1984optical. The frequency of the incoming photon packet in a grid cell determines the corresponding opacity. If a packet is absorbed in the cell, we deposit its energy (given by $E^{\text{abs}}_i = N_i E_{\gamma}$ where $N$ is the number of packets absorbed by that cell $i$) to the cell and recalculate the cell's temperature. As the cell is assumed to be in local thermodynamics equilibrium, the absorbed energy must also be reemitted. The emissivity of dust can be written as 
+Let the stellar luminosity be $L$ which we divide into $N_{\gamma}$ photon packets each with energy $E_{\gamma}$ giving 
+
+$$
+E_{\gamma} = \dfrac{L \Delta t}{N_{\gamma}}
+$$
+
+Upon injection into the disk (grid), the monochromatic photon packet will be assigned a frequency at random, selected from the spectral energy distribution (SED) of the source. The dust we have setup in our disk can now scatter, absorb or reemit the incoming radiation. All of these processes require us to have the opacity of the dust in our model, which depends on its composition. We have considered graphite based and astronomical silicates but we optical data for other dusts like pyroxenes as well. All of this data is taken from @draine1984optical. The frequency of the incoming photon packet in a grid cell determines the corresponding opacity. If a packet is absorbed in the cell, we deposit its energy (given by $E^{\text{abs}}_{i} = N_{i}E_{\gamma}$ where $N$ is the number of packets absorbed by that cell $i$) to the cell and recalculate the cell's temperature. As the cell is assumed to be in local thermodynamics equilibrium, the absorbed energy must also be reemitted. The emissivity of dust can be written as 
 $$
 j_\nu = \kappa_\nu \rho B_\nu (T)
 $$
@@ -316,10 +337,15 @@ To self-consistently evolve the gas temperature along with evolving abundances, 
 
 We used the KInetic Database for Astrochemistry (KIDA) as the provider for our chemical network.
 
-The equation we solve is given by $$\begin{split}
+The equation we solve is given by 
+
+$$
+\begin{split}
         \dfrac{d}{dt} X_i &= P_i (X; T) - D_i (X; T), \hspace{5pt} i = 1, \ldots, N, \\
         \dfrac{d}{dt} T_{\text{gas}} &= \dfrac{\Gamma - \Lambda}{C_V}
-    \end{split}$$ where $X_i$ is the abundance of species $i$, $P_i$ and $D_i$ being the production and destruction rates. $\Gamma$ and $\Lambda$ represent the heating and cooling rates respectively. We employ the use of `SciPy` [@2020SciPy-NMeth] library's `LSODA` solver which is based on legacy solver of the same name.
+\end{split}
+$$
+where $X_i$ is the abundance of species $i$, $P_i$ and $D_i$ being the production and destruction rates. $\Gamma$ and $\Lambda$ represent the heating and cooling rates respectively. We employ the use of `SciPy` [@2020SciPy-NMeth] library's `LSODA` solver which is based on legacy solver of the same name.
 
 ## Three-phase Gas-grain Astrochemical Models
 
