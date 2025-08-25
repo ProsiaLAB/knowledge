@@ -1,17 +1,17 @@
-import { QuartzEmitterPlugin } from "../types"
-import { i18n } from "../../i18n"
-import { unescapeHTML } from "../../util/escape"
-import { FullSlug, getFileExtension, isAbsoluteURL, joinSegments, QUARTZ } from "../../util/path"
-import { ImageOptions, SocialImageOptions, defaultImage, getSatoriFonts } from "../../util/og"
-import sharp from "sharp"
-import satori, { SatoriOptions } from "satori"
-import { loadEmoji, getIconCode } from "../../util/emoji"
-import { Readable } from "stream"
-import { write } from "./helpers"
-import { BuildCtx } from "../../util/ctx"
-import { QuartzPluginData } from "../vfile"
 import fs from "node:fs/promises"
+import satori, { SatoriOptions } from "satori"
+import sharp from "sharp"
+import { Readable } from "stream"
 import { styleText } from "util"
+import { i18n } from "../../i18n"
+import { BuildCtx } from "../../util/ctx"
+import { getIconCode, loadEmoji } from "../../util/emoji"
+import { unescapeHTML } from "../../util/escape"
+import { defaultImage, getSatoriFonts, ImageOptions, SocialImageOptions } from "../../util/og"
+import { FullSlug, getFileExtension, isAbsoluteURL, joinSegments, QUARTZ } from "../../util/path"
+import { QuartzEmitterPlugin } from "../types"
+import { QuartzPluginData } from "../vfile"
+import { write } from "./helpers"
 
 const defaultOptions: SocialImageOptions = {
   colorScheme: "lightMode",
@@ -30,7 +30,7 @@ async function generateSocialImage(
   userOpts: SocialImageOptions,
 ): Promise<Readable> {
   const { width, height } = userOpts
-  const iconPath = joinSegments(QUARTZ, "static", "icon.png")
+  const iconPath = joinSegments(QUARTZ, "static", "profile.jpg")
   let iconBase64: string | undefined = undefined
   try {
     const iconData = await fs.readFile(iconPath)
