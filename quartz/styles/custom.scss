@@ -64,7 +64,7 @@ article.popover-hint h3 {
     margin: 0.15rem 0;
     border-radius: 6px;
     background-color: transparent;
-    color: #cdd6f4;
+    // color: #cdd6f4;
     text-decoration: none;
     white-space: normal;
     word-break: break-word;
@@ -81,4 +81,24 @@ article.popover-hint h3 {
     background-color: rgba(137, 180, 250, 0.25);
     color: #89b4fa;
     font-weight: 600;
+}
+
+::selection {
+    background-color: #b4befe; // Light tertiary
+    color: #1e1e2e; // Dark text (Base/Crust)
+}
+
+.date-container {
+    background-color: rgba(130, 130, 130, 0.1);
+    /* A transparent light gray */
+    border-left: 3px solid var(--tertiary);
+    /* Uses your site's tertiary color variable */
+    padding: 0.5rem 0.75rem;
+    /* 0.5rem top/bottom, 0.75rem left/right */
+    border-radius: 4px;
+    /* Slightly rounded corners */
+    margin-top: 1rem;
+    /* Add some space above the block */
+    line-height: 1.6;
+    /* Increase spacing between the two lines */
 }

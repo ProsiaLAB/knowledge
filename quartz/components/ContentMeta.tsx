@@ -1,10 +1,9 @@
-import { Date, getDate } from "./Date"
-import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import readingTime from "reading-time"
-import { classNames } from "../util/lang"
-import { i18n } from "../i18n"
 import { JSX } from "preact"
+import readingTime from "reading-time"
+import { i18n } from "../i18n"
+import { classNames } from "../util/lang"
 import style from "./styles/contentMeta.scss"
+import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
 interface ContentMetaOptions {
   /**
@@ -15,7 +14,7 @@ interface ContentMetaOptions {
 }
 
 const defaultOptions: ContentMetaOptions = {
-  showReadingTime: true,
+  showReadingTime: false,
   showComma: true,
 }
 
@@ -29,9 +28,20 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
     if (text) {
       const segments: (string | JSX.Element)[] = []
 
-      if (fileData.dates) {
-        segments.push(<Date date={getDate(cfg, fileData)!} locale={cfg.locale} />)
-      }
+      // if (fileData.dates) {
+      //   // First segment: Emphasized created date (no label, italic for subtle emp)
+      //   segments.push(
+      //     <em>
+      //       Created: <Date date={fileData.dates.created} locale={cfg.locale} />
+      //     </em>,
+      //   )
+      //   // Second segment: "Last Modified:" with emphasized date (italic)
+      //   segments.push(
+      //     <span>
+      //       Last Modified: <em><Date date={fileData.dates.modified} locale={cfg.locale} /></em>
+      //     </span>,
+      //   )
+      // }
 
       // Display reading time if enabled
       if (options.showReadingTime) {

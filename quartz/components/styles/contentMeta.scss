@@ -3,7 +3,7 @@
   color: var(--darkgray);
 
   &[show-comma="true"] {
-    > *:not(:last-child) {
+    >*:not(:last-child) {
       margin-right: 8px;
 
       &::after {

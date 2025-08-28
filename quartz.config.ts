@@ -29,15 +29,15 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#eff1f5",       // Base
-          lightgray: "#ccd0da",   // Surface1
-          gray: "#9ca0b0",        // Overlay1
-          darkgray: "#4c4f69",    // Text
-          dark: "#1e1e2e",        // Mantle (darkest in Latte)
-          secondary: "#1e66f5",   // Blue
-          tertiary: "#40a02b",    // Green
-          highlight: "rgba(30, 102, 245, 0.15)", // Blue @ 15% opacity
-          textHighlight: "#dc8a78aa", // Rosewater with alpha
+          light: "#eff1f5",       // Base - main background
+          lightgray: "#e6e9ef",   // Mantle - elevated surfaces, cards
+          gray: "#5c5f77",        // Overlay0 - much stronger contrast for secondary text
+          darkgray: "#4c4f69",    // Text - main readable text (keep this strong)
+          dark: "#1e1e2e",        // Crust - highest contrast for important text
+          secondary: "#1e66f5",   // Blue - primary accent color
+          tertiary: "#fab387",    // Green - supporting accent color  
+          highlight: "rgba(30, 102, 245, 0.12)", // Blue with reduced opacity
+          textHighlight: "rgba(220, 138, 120, 0.25)", // Rosewater for text highlights
         },
         darkMode: {
           light: "#11111b",        // Crust - deepest background
@@ -46,7 +46,7 @@ const config: QuartzConfig = {
           darkgray: "#9399b2",     // Overlay2 - muted text, placeholders
           dark: "#cdd6f4",         // Text - main readable text
           secondary: "#89b4fa",    // Blue - primary accent color
-          tertiary: "#94e2d5",     // Teal - supporting accent color
+          tertiary: "#fab387",     // Teal - supporting accent color
           highlight: "rgba(6, 18, 39, 0.08)", // Blue with lower opacity for hover/selection
           textHighlight: "rgba(249, 226, 175, 0.20)", // Peach tint for text highlights
         },

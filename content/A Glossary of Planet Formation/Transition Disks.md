@@ -13,9 +13,9 @@ The first works which identified these disks like Strom et al. (1989)[^3] and Sk
 >[[Near-infrared bump]]
 
 
-[^1]: An Observational Perspective of Transitional Disks: https://arxiv.org/pdf/1402.7103
+[^1]: *An Observational Perspective of Transitional Disks*: https://arxiv.org/pdf/1402.7103
 
-[^2]: Transition Disks: https://pweb.cfa.harvard.edu/news/transition-disks
+[^2]: *Transition Disks*: https://pweb.cfa.harvard.edu/news/transition-disks
 
 [^3]: Strom K. M. et al. (1989) Astron. J., 97, 1451.
 
