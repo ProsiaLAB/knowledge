@@ -1,6 +1,5 @@
 import { QuartzConfig } from "./quartz/cfg";
 import * as Plugin from "./quartz/plugins";
-import renameFootnotesHeading from './quartz/plugins/rename-footnotes-heading';
 
 /**
  * Quartz 4 Configuration
@@ -77,7 +76,7 @@ const config: QuartzConfig = {
       Plugin.Citations({
         linkCitations: true,
       }),
-      renameFootnotesHeading(),
+      Plugin.FootnotesToReferences(),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
@@ -97,7 +96,6 @@ const config: QuartzConfig = {
       // Comment out CustomOgImages to speed up build time
       Plugin.CustomOgImages(),
     ],
-
   },
 }
 
