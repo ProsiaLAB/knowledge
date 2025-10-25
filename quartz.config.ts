@@ -77,6 +77,7 @@ const config: QuartzConfig = {
         linkCitations: true,
       }),
       Plugin.FootnotesToReferences(),
+      Plugin.PaperPreviewInjector(),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

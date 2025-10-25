@@ -4,6 +4,17 @@ tags:
 ---
 # Optical Depth
 
+In the most simplest terms, optical depth refers to the level of transparency of a medium. There are multiple ways to define it mathematically, but the most straightforward way is:
+$$
+\tau = \int_0^z \alpha dz
+$$
+where $\alpha$ is the extinction coefficient of the medium. Other definitions include
+$$
+\tau = -\ln \left( \dfrac{I}{I_0} \right) = \sigma N = 
+$$
+
+
+
 # Dust Extinction
 
 Light emitted from light sources like stars as it reaches to us (observers) can attenuate through dust in three major ways:
