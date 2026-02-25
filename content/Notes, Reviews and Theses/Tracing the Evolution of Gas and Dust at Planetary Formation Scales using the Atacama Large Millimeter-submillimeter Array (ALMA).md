@@ -163,7 +163,7 @@ $$
 \dfrac{d I_{\nu}}{ds} =[\alpha^c_{\nu}(r, \theta) + \alpha^l_{\nu} (r, \theta, \bar{v})][S_{\nu} (r, \theta, \bar{v}) - I_{\nu}]
 $$
 
-where the source function $S_{\nu}$ is given as 
+where the [[Source Function|source function]] $S_{\nu}$ is given as 
 
 $$
 S_{\nu} = \dfrac{j^c_{\nu} (r, \theta) + j^l_{\nu}(r, \theta, \bar{v})}{\alpha^c_{\nu} (r, \theta) + \alpha^l_{\nu}(r, \theta, \bar{v})}
