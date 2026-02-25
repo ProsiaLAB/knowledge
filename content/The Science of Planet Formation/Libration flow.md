@@ -27,6 +27,6 @@ So what do these streamlines represent then? I think the scaling of this figure 
 # Motion near $L_4$ and $L_5$
 
 If you look at a top-down view of the inner solar system and Jupiter, you will find that is quite a busy place.
-![[Pasted image 20260120220633.png]]
+![[jupiter-trojans.png]]
  
 
