@@ -50,7 +50,6 @@ const config: QuartzConfig = {
           highlight: "rgba(6, 18, 39, 0.08)", // Blue with lower opacity for hover/selection
           textHighlight: "rgba(249, 226, 175, 0.20)", // Peach tint for text highlights
         },
-
       },
     },
   },
