@@ -1,10 +1,8 @@
 ---
 tags:
   - projects
+abstract: This page will act as a living document to gather my learnings on the spiral arms project. It will be remain as it is after the completion of the project but learnings from it may be repurposed into new entries elsewhere in the knowledge base.
 ---
->[!Note]
->*This page will act as a living document to gather my learnings on the spiral arms project. It will be remain as it is after the completion of the project but learnings from it may be repurposed into new entries elsewhere in the knowledge base.*
-
 # Understanding generic hydrodynamical setups of disk-planet systems in Athena++
 
 The biggest problem I have had is to develop a better understanding of frames of reference in which the equations are needed to be implemented in the code, say for example, in the `MeshBlock::ProblemGenerator`. The basic structure of a file looks like as follows
@@ -137,7 +135,7 @@ $$
 \Phi_p = -\dfrac{GM_p}{d} \left[\left(\dfrac{d}{\epsilon}\right)^4 - 2\left(\dfrac{d}{\epsilon}\right)^3 + 2 \left(\dfrac{d}{\epsilon}\right)\right]
 $$
 
-when $d\le \epsilon$. For $d \ge \epsilon$, there is no softening of the potential. So let's proceed by calculating $a_R^{(1)}$ (the other two terms are same):
+when $d\le \epsilon$. For $d \ge \epsilon$, there is no [[Gravitational Softening|softening of the potential]]. So let's proceed by calculating $a_R^{(1)}$ (the other two terms are same):
 
 $$
 \begin{split}

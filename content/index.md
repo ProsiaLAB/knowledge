@@ -12,4 +12,4 @@ Browse by domain:
 - [[The Observation Toolkit/index|The Observation Toolkit]]
 - [[The Science of Planet Formation/index|The Science of Planet Formation]]
 - [[The Tools of the Trade/index|The Tools of the Trade]]
-- [[Notes, Reviews and Theses/index|Notes, Reviews and Theses]]
+- [[Projects, Reviews and Theses/index|Projects, Reviews and Theses]]
