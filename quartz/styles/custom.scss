@@ -248,104 +248,74 @@ a.data-footnote-backref {
 
 @media (max-width: 768px) {
 
-    /* Prevent horizontal scroll */
-    html,
-    body {
-        overflow-x: hidden;
+    // Prevent the left sidebar sliver from bleeding into the viewport
+    .left.sidebar {
+        display: none !important;
+        width: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
-    /* Global typography adjustments */
-    body {
-        font-size: 0.95rem;
+    // Ensure the page body doesn't overflow horizontally
+    body,
+    #quartz-root,
+    .page,
+    .page-wrapper {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
     }
 
+    // Let the main content column fill the full width
+    .center,
+    .page>.center,
+    article {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        box-sizing: border-box !important;
+    }
+
+    // Right sidebar (table of contents, backlinks, etc.) — stack below content
+    .right.sidebar {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+        box-sizing: border-box !important;
+    }
+
+    // Article title scale-down for narrow screens
     h1.article-title {
         font-size: 1.5rem;
-        line-height: 1.3;
-        margin-bottom: 1.25rem;
     }
 
-    article.popover-hint h1 {
-        font-size: 1.25rem;
-    }
-
-    article.popover-hint h2 {
-        font-size: 1.1rem;
-    }
-
-    article.popover-hint h3 {
-        font-size: 0.95rem;
-    }
-
-    /* Explorer links (better tap targets) */
-    .left.sidebar .explorer a {
-        font-size: 1rem;
-        padding: 0.6rem 0.75rem;
-    }
-
-    .left.sidebar .explorer a:hover {
-        background-color: transparent;
-        color: inherit;
-    }
-
-    /* Paper preview block */
-    .paper-preview-container {
-        margin: 1.5rem 0 2rem 0;
-    }
-
+    // Paper preview: tighten padding on mobile
     .paper-preview {
         padding: 1rem 1.25rem;
-        border-radius: 6px;
     }
 
-    /* Journal logo */
+    // Journal logos: don't let them overflow
     .journal-logo img {
-        max-height: 45px;
-        max-width: 100%;
-    }
-
-    /* Authors */
-    .authors-list {
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
-
-    /* Metadata – stack vertically */
-    .metadata {
-        padding: 0.75rem;
-        font-size: 0.85rem;
-    }
-
-    .metadata-row {
-        flex-direction: column;
-        gap: 0.4rem;
-    }
-
-    .metadata-item {
-        flex-direction: column;
-        gap: 0.2rem;
-    }
-
-    /* Abstract */
-    .abstract-section {
-        margin-top: 1.25rem;
-    }
-
-    .abstract-heading {
-        font-size: 1rem;
-    }
-
-    .abstract-text {
-        font-size: 0.9rem;
-        line-height: 1.6;
-        text-align: left;
-        /* justified text looks bad on mobile */
-    }
-
-    /* Images */
-    img {
         max-width: 100%;
         height: auto;
     }
 
+    // Metadata rows: stack vertically instead of wrapping awkwardly
+    .metadata-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    // Abstract text: left-align on mobile (justified text looks bad on narrow columns)
+    .abstract-text {
+        text-align: left;
+    }
+
+    // Prevent any wide images from causing horizontal scroll
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
