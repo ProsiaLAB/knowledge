@@ -6,10 +6,10 @@ description: Repository for research notes
 
 Browse by domain:
 
-- [[Astrophysical Objects/index|Astrophysical Objects]]
-- [[A Tour of Planet Formation/index|A Tour of Planet Formation]]
-- [[Planets and Planetary Systems/index|Planets and Planetary Systems]]
-- [[The Observation Toolkit/index|The Observation Toolkit]]
-- [[The Science of Planet Formation/index|The Science of Planet Formation]]
-- [[The Tools of the Trade/index|The Tools of the Trade]]
-- [[Projects, Reviews and Theses/index|Projects, Reviews and Theses]]
+- [[objects/index|Astrophysical Objects]]
+- [[tour/index|A Tour of Planet Formation]]
+- [[planets-and-planetary-systems/index|Planets and Planetary Systems]]
+- [[observations/index|The Observation Toolkit]]
+- [[science/index|The Science of Planet Formation]]
+- [[tools/index|The Tools of the Trade]]
+- [[notes-projects-reviews-theses/index|Notes, Projects, Reviews and Theses]]
