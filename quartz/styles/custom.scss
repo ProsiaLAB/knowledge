@@ -117,6 +117,36 @@ img[src$="apjl.png"] {
     height: auto;
 }
 
+img[src$="natastro.svg"] {
+    background: none !important;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+html[saved-theme="dark"] img[src$="natastro.svg"] {
+    filter: invert(1);
+}
+
+html[saved-theme="dark"] img[src$="apjs.png"] {
+    content: url("/images/assets/apjs-dark.png");
+}
+
+html[saved-theme="light"] img[src$="mnras.svg"] {
+    filter: invert(1);
+}
+
+
+html[saved-theme="dark"] img[src$="sciadv-logo.svg"] {
+    content: url("/images/assets/sciadv-logo-dark.svg");
+}
+
+html[saved-theme="dark"] img[src$="logo_aa.svg"] {
+    filter: brightness(1.35);
+}
+
+
+
 img[src$="apjs.png"] {
     background: none !important;
     display: block;

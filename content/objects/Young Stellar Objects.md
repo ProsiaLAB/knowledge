@@ -1,4 +1,5 @@
 ---
 tags:
+  - protostars
   - stars
 ---
