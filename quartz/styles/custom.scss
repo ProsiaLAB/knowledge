@@ -364,3 +364,13 @@ a.data-footnote-backref {
 .tag {
     white-space: nowrap;
 }
+
+.global-graph-outer {
+    position: fixed;
+    inset: 0;
+}
+
+.global-graph-container {
+    width: 100vw;
+    height: 100vh;
+}

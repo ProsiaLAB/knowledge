@@ -8,4 +8,4 @@ tags:
 ---
 # Solar and sub-solar compositions
 
-The theory of [[The History of Solar System|MMSN]] states that.
+The theory of [[Minimum Mass Solar Nebula|MMSN]] states that.
