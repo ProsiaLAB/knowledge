@@ -89,6 +89,16 @@ $$
 \omega(r) = \omega_0 \left(\dfrac{r}{1^{\prime\prime}}\right)^{-\gamma} + \omega_f
 $$
 
+## Radius-by-radius method
+
+$$
+\begin{split}
+\chi^2 (r, \omega) &= \sum_{i < j} \sum_{\phi} \left(\dfrac{I_i (r, \phi) - I_j (r, \phi - \omega \Delta T_{i,j})}{\sigma_{i,j}}\right)^2, \\ 
+\text{where} \quad \sigma_{i, j} &= \sqrt{\sigma_i^2  + \sigma_j^2}
+\end{split}
+
+$$
+
 
 
 
