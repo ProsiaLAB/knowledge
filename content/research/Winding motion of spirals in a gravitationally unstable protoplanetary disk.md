@@ -89,6 +89,12 @@ $$
 \omega(r) = \omega_0 \left(\dfrac{r}{1^{\prime\prime}}\right)^{-\gamma} + \omega_f
 $$
 
+Log-likelihood of wrt to each epoch:
+
+$$
+-\dfrac{1}{2} \sum_{i} \sum_{\text{image}} \left(\dfrac{I_i - I_{\text{ref}}}{\sigma_{i, \text{ref}}}\right)^2
+$$
+
 ## Radius-by-radius method
 
 $$

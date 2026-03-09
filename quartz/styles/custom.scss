@@ -124,7 +124,18 @@ img[src$="natastro.svg"] {
     height: auto;
 }
 
+img[src$="arxiv.svg"] {
+    background: none !important;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 html[saved-theme="dark"] img[src$="natastro.svg"] {
+    filter: invert(1);
+}
+
+html[saved-theme="light"] img[src$="arxiv.svg"] {
     filter: invert(1);
 }
 
