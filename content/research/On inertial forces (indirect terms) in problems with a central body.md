@@ -39,6 +39,3 @@ abstract: |-
   generalized to other astrophysical systems.
 journal_logo: arxiv.svg
 ---
-$$
-\dfrac{}{}
-$$

@@ -77,6 +77,7 @@ const config: QuartzConfig = {
       Plugin.Latex({ renderEngine: "mathjax" }),
       Plugin.Citations({
         linkCitations: true,
+        suppressBibliography: true,
       }),
       // Plugin.FootnotesToReferences(),
       Plugin.PaperPreviewInjector(),

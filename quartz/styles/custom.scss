@@ -385,3 +385,17 @@ a.data-footnote-backref {
     width: 100vw;
     height: 100vh;
 }
+
+.citation-popover {
+    position: absolute;
+    max-width: 320px;
+    padding: 10px;
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 1000;
+}
