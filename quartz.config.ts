@@ -23,8 +23,8 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Major Mono Display",
-        body: "Archivo",
+        header: "Zalando Sans Expanded",
+        body: "Work Sans",
         code: "JetBrains Mono",
       },
       colors: {

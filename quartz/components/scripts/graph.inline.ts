@@ -1,24 +1,24 @@
-import type { ContentDetails } from "../../plugins/emitters/contentIndex"
-import {
-  SimulationNodeDatum,
-  SimulationLinkDatum,
-  Simulation,
-  forceSimulation,
-  forceManyBody,
-  forceCenter,
-  forceLink,
-  forceCollide,
-  forceRadial,
-  zoomIdentity,
-  select,
-  drag,
-  zoom,
-} from "d3"
-import { Text, Graphics, Application, Container, Circle } from "pixi.js"
 import { Group as TweenGroup, Tween as Tweened } from "@tweenjs/tween.js"
-import { registerEscapeHandler, removeAllChildren } from "./util"
+import {
+  Simulation,
+  SimulationLinkDatum,
+  SimulationNodeDatum,
+  drag,
+  forceCenter,
+  forceCollide,
+  forceLink,
+  forceManyBody,
+  forceRadial,
+  forceSimulation,
+  select,
+  zoom,
+  zoomIdentity,
+} from "d3"
+import { Application, Circle, Container, Graphics, Text } from "pixi.js"
+import type { ContentDetails } from "../../plugins/emitters/contentIndex"
 import { FullSlug, SimpleSlug, getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
 import { D3Config } from "../Graph"
+import { registerEscapeHandler, removeAllChildren } from "./util"
 
 type GraphicsInfo = {
   color: string
@@ -385,7 +385,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
         fill: computedStyleMap["--dark"],
         fontFamily: computedStyleMap["--bodyFont"],
       },
-      resolution: window.devicePixelRatio * 4,
+      resolution: 2,
     })
     label.scale.set(1 / scale)
 
