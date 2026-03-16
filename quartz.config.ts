@@ -1,5 +1,5 @@
-import { QuartzConfig } from "./quartz/cfg";
-import * as Plugin from "./quartz/plugins";
+import { QuartzConfig } from "./quartz/cfg"
+import * as Plugin from "./quartz/plugins"
 
 /**
  * Quartz 4 Configuration
@@ -23,11 +23,8 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: {
-          name: "Rubik Mono One",
-          weights: [400],
-        },
-        body: "Rubik",
+        header: "Major Mono Display",
+        body: "Archivo",
         code: "JetBrains Mono",
       },
       colors: {
