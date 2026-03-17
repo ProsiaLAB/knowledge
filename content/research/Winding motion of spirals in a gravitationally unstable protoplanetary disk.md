@@ -110,7 +110,5 @@ $$
 
 [^1]: todo: What is this?
 
-[^2]: *Astrophysics of Planet Formation, Equation 5.32*: 
-$$
-\dfrac{dR_s}{dt} \approx 1 \left(\dfrac{\Sigma_p}{10\; \text{g\;cm}^{-2}}\right) F_g \text{\;cm\;yr}^{-1}
-$$
+[^2]: *Astrophysics of Planet Formation, Equation 5.32*: $\dfrac{dR_s}{dt} \approx 1 \left(\dfrac{\Sigma_p}{10\; \text{g\;cm}^{-2}}\right) F_g \text{\;cm\;yr}^{-1}$
+

@@ -31,7 +31,7 @@ More generally,
 $$
 A_{\lambda} \coloneqq -2.5 \log_{10} \left( \dfrac{F_{\lambda}}{F_{\lambda, \text{unatten}}} \right)
 $$
-Simplifying by substituting the expression for [[Optically Thick and Optically Thin Media#Optical Depth|optical depth]], $F_{\lambda} = F_{\lambda, \text{unatten}} e^{-\tau_{\lambda}}$
+Simplifying by substituting the expression for [[Optically Thick and Optically Thin Media#Optical Depth|optical depth]], $F_{\lambda} = F_{\lambda, \text{unatten}} e^{-\tau_{\lambda}}$ [@wild2011empirical]
 $$
 A_{\lambda} = 1.086 \tau_V
 $$
@@ -42,7 +42,7 @@ Observationally, the measurement of overall amplitude of extinction (that is, wh
 $$
 \tau_{\lambda} = \tau_{V} Q_{\lambda}
 $$
-The latter factor represents dust extinction and accounts for grain composition and shape, but more importantly also is a function of local geometry of dust and stars along the line of sight as well the global geometry of the galaxy. There are multiple empirical derivation for values of $Q_{\lambda}$, with one of them being the defined as the slopes of the (dust) attenuation curves. The value for this factor used in Tielens (2005), uses $Q_{\lambda} = 2.6$ (see Equation 3.19). 
+The latter factor represents dust extinction and accounts for grain composition and shape, but more importantly also is a function of local geometry of dust and stars along the line of sight as well the global geometry of the galaxy. There are multiple empirical derivation for values of $Q_{\lambda}$, with one of them being the defined as the slopes of the (dust) attenuation curves. The value for this factor used in @tielens2005physics, uses $Q_{\lambda} = 2.6$ (see Equation 3.19). 
 
 Now, given this formulation, if one were to express visual extinction ($A_V$) using, say, UV flux or intensities, the final expression comes together as follows
 
@@ -53,9 +53,4 @@ A_V &= 1.086 \tau_V \\
 &= - 1.086 \ln \left( \dfrac{F_{UV}}{F_{UV, \text{unatten}}} \right) \cdot \dfrac{1}{Q_{\lambda}}
 \end{align}
 $$
-which is the same form as described in Du & Bergin (2014).
-
->[!References]-
->1. [Wild et al, 2011](https://ui.adsabs.harvard.edu/abs/2011MNRAS.417.1760W/abstract)
->2. [Tielens, 2005](https://ui.adsabs.harvard.edu/abs/2005pcim.book.....T/abstract)
->3. [Du & Bergin, 2014](http://dx.doi.org/10.1088/0004-637X/792/1/2)
+which is the same form as described in @Du2014.
