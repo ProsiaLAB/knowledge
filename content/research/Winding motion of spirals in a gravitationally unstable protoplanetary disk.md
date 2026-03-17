@@ -34,7 +34,7 @@ $$
 t_{\text{grow}} \sim \dfrac{M}{\dot{M}}
 $$
 
-Safronov (1969) gives the expression of solid core growth $\dot{M}$:
+@safronov1972evolution gives the expression of solid core growth $\dot{M}$:
 
 $$
 \dot{M} = \pi R_c^2 \sigma_p \Omega F_g
@@ -46,7 +46,7 @@ $$
 \sigma_p \propto a^{-3/2} 
 $$
 
-Rice and Armitage (2003) provide reference values for a giant planet at the current location of Jupiter to estimate the growth time scale. A similar treatment can be found in Armitage (2020)[^2] which derives a very slow growth rate at the location of Jupiter. In any case, we can do some algebra and derive how does this rate vary with radius:
+@rice2003formation provide reference values for a giant planet at the current location of Jupiter to estimate the growth time scale. A similar treatment can be found in Armitage (2020)[^2] which derives a very slow growth rate at the location of Jupiter. In any case, we can do some algebra and derive how does this rate vary with radius:
 
 $$
 \begin{split}
@@ -110,4 +110,7 @@ $$
 
 [^1]: todo: What is this?
 
-[^2]: *Astrophysics of Planet Formation, Equation 5.32*
+[^2]: *Astrophysics of Planet Formation, Equation 5.32*: 
+$$
+\dfrac{dR_s}{dt} \approx 1 \left(\dfrac{\Sigma_p}{10\; \text{g\;cm}^{-2}}\right) F_g \text{\;cm\;yr}^{-1}
+$$
