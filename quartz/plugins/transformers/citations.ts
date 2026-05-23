@@ -118,7 +118,7 @@ export const Citations: QuartzTransformerPlugin<Partial<Options>> = (userOpts) =
 
       let lang: string = "en-US"
       if (ctx.cfg.configuration.locale !== "en-US") {
-        lang = `https://raw.githubusercontent.com/citation-stylelanguage/locales/refs/heads/master/locales-${ctx.cfg.configuration.locale}.xml`
+        lang = `https://raw.githubusercontent.com/citation-style-language/locales/refs/heads/master/locales-${ctx.cfg.configuration.locale}.xml`
       }
 
 
