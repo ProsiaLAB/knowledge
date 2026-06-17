@@ -1,0 +1,25 @@
+{
+  "name": "preserve-tag-case",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild index.ts --bundle --platform=node --format=esm --outfile=dist/index.js --external:@quartz-community/types --external:fs --external:path --banner:js=\"import { createRequire } from 'module'; const require = createRequire(import.meta.url);\""
+  },
+  "peerDependencies": {
+    "@quartz-community/types": "*",
+    "mdast": "*"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.2",
+    "typescript": "^5.0.0",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0"
+  },
+  "quartz": {
+    "name": "preserve-tag-case",
+    "displayName": "Preserve Tag Case",
+    "category": "transformer",
+    "defaultOrder": 50
+  }
+}
