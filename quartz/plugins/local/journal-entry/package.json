@@ -1,0 +1,23 @@
+{
+  "name": "journal-entry",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild index.ts --bundle --platform=node --format=esm --outfile=dist/index.js"
+  },
+  "peerDependencies": {
+    "@quartz-community/types": "*",
+    "mdast": "*"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.2",
+    "typescript": "^5.0.0"
+  },
+  "quartz": {
+    "name": "journal-entry",
+    "displayName": "Journal Entry",
+    "category": "transformer",
+    "defaultOrder": 50
+  }
+}
