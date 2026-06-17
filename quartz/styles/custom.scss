@@ -1,3 +1,1000 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+img {
+    background-color: white;
+}
+
+.page-title {
+    font-size: 1.75rem;
+}
+
+article.popover-hint h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+article.popover-hint h2 {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+article.popover-hint h3 {
+    font-size: 1rem;
+}
+
+h1.article-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+
+
+/* Only style links inside the Explorer tree */
+.left.sidebar .explorer a {
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 0.35rem 0.6rem;
+    margin: 0.15rem 0;
+    border-radius: 6px;
+    background-color: transparent;
+    // color: #cdd6f4;
+    text-decoration: none;
+    white-space: normal;
+    word-break: break-word;
+}
+
+/* Hover state */
+.left.sidebar .explorer a:hover {
+    background-color: rgba(137, 180, 250, 0.15);
+    color: #89b4fa;
+}
+
+/* Active page */
+.left.sidebar .explorer a.active {
+    background-color: rgba(137, 180, 250, 0.25);
+    color: #89b4fa;
+    font-weight: 600;
+}
+
+::selection {
+    background-color: #b4befe; // Light tertiary
+    color: #1e1e2e; // Dark text (Base/Crust)
+}
+
+.date-container {
+    background-color: rgba(130, 130, 130, 0.1);
+    /* A transparent light gray */
+    border-left: 3px solid var(--tertiary);
+    /* Uses your site's tertiary color variable */
+    padding: 0.5rem 0.75rem;
+    /* 0.5rem top/bottom, 0.75rem left/right */
+    border-radius: 4px;
+    /* Slightly rounded corners */
+    margin-top: 1rem;
+    /* Add some space above the block */
+    line-height: 1.6;
+    /* Increase spacing between the two lines */
+}
+
+// Logos adjustments
+img[src$="sciadv-logo.svg"] {
+    background: none !important;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img[src$="logo_aa.svg"] {
+    background: none !important;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img[src$="apj.png"] {
+    background: none !important;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Default: dark mode */
+img[src$="mnras.svg"] {
+    background: none !important;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img[src$="apjl.png"] {
+    background: none !important;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img[src$="natastro.svg"] {
+    background: none !important;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img[src$="arxiv.svg"] {
+    background: none !important;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+html[saved-theme="dark"] img[src$="natastro.svg"] {
+    filter: invert(1);
+}
+
+html[saved-theme="light"] img[src$="arxiv.svg"] {
+    filter: invert(1);
+}
+
+html[saved-theme="dark"] img[src$="apjs.png"] {
+    content: url("/images/assets/apjs-dark.png");
+}
+
+html[saved-theme="light"] img[src$="mnras.svg"] {
+    filter: invert(1);
+}
+
+
+html[saved-theme="dark"] img[src$="sciadv-logo.svg"] {
+    content: url("/images/assets/sciadv-logo-dark.svg");
+}
+
+html[saved-theme="dark"] img[src$="logo_aa.svg"] {
+    filter: brightness(1.35);
+}
+
+
+
+img[src$="apjs.png"] {
+    background: none !important;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// Paper Preview Container
+.paper-preview-container {
+    margin: 2rem 0 3rem 0;
+    padding: 0;
+}
+
+.paper-preview {
+    background-color: rgba(130, 130, 130, 0.05);
+    border-left: 4px solid #89b4fa; // Using the blue from your theme
+    border-radius: 6px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: rgba(137, 180, 250, 0.08);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+}
+
+// Dark mode support
+.darkmode .paper-preview {
+    background-color: rgba(180, 190, 254, 0.08);
+    border-left-color: #b4befe;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+        background-color: rgba(137, 180, 250, 0.12);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+}
+
+// Journal logo
+.journal-logo {
+    margin-bottom: 1.5rem;
+
+    img {
+        max-height: 60px;
+        max-width: 300px;
+    }
+}
+
+// Authors list (inline, comma-separated)
+.authors-list {
+    font-size: 0.95rem;
+    // color: var(--gray);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+// Metadata section
+.metadata {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: rgba(130, 130, 130, 0.1);
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.darkmode .metadata {
+    background-color: rgba(180, 190, 254, 0.1);
+}
+
+.metadata-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.metadata-item {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.metadata-label {
+    font-weight: 600;
+    // color: var(--dark);
+}
+
+
+
+.metadata-value {
+    // color: var(--gray);
+
+    a {
+        color: #89b4fa;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: #b4befe;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+// Abstract section
+.abstract-section {
+    margin-top: 1.5rem;
+}
+
+.abstract-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    // color: var(--dark);
+    margin-bottom: 0.75rem;
+}
+
+
+.abstract-text {
+    font-size: 0.95rem;
+    // color: var(--gray);
+    line-height: 1.7;
+    text-align: justify;
+}
+
+a.data-footnote-backref {
+    font-size: 0;
+    /* hide the existing ↩ */
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    // Prevent the left sidebar sliver from bleeding into the viewport
+    .left.sidebar {
+        display: none !important;
+        width: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    // Ensure the page body doesn't overflow horizontally
+    body,
+    #quartz-root,
+    .page,
+    .page-wrapper {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+
+    // Let the main content column fill the full width
+    .center,
+    .page>.center,
+    article {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        box-sizing: border-box !important;
+    }
+
+    // Right sidebar (table of contents, backlinks, etc.) — stack below content
+    .right.sidebar {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+        box-sizing: border-box !important;
+    }
+
+    // Article title scale-down for narrow screens
+    h1.article-title {
+        font-size: 1.5rem;
+    }
+
+    // Paper preview: tighten padding on mobile
+    .paper-preview {
+        padding: 1rem 1.25rem;
+    }
+
+    // Journal logos: don't let them overflow
+    .journal-logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    // Metadata rows: stack vertically instead of wrapping awkwardly
+    .metadata-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    // Abstract text: left-align on mobile (justified text looks bad on narrow columns)
+    .abstract-text {
+        text-align: left;
+    }
+
+    // Prevent any wide images from causing horizontal scroll
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.tag-link {
+    white-space: nowrap;
+}
+
+.tag {
+    white-space: nowrap;
+}
+
+.global-graph-outer {
+    position: fixed;
+    inset: 0;
+}
+
+.global-graph-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.citation-popover {
+    position: absolute;
+    max-width: 320px;
+    padding: 10px;
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 1000;
+}
+
+.canvas text {
+    font-family: system-ui, sans-serif;
+}
+
+// ============================================================
+// JOURNAL PAGE STYLES
+// Scoped to .journal-month-block (emitted by JournalEntryInjector)
+// No .journal-page wrapper needed — the blocks themselves are the hook.
+// ============================================================
+
+// --- Month color tokens (on the block itself, inherited by children) ---
+// .journal-month-block {
+//     --j-accent: var(--tertiary);
+//     --j-accent-bg: rgba(130, 130, 130, 0.06);
+
+//     &[data-month="january"] {
+//         --j-accent: #4a7fd4;
+//         --j-accent-bg: rgba(74, 127, 212, 0.08);
+//     }
+
+//     &[data-month="february"] {
+//         --j-accent: #9b6fe8;
+//         --j-accent-bg: rgba(155, 111, 232, 0.08);
+//     }
+
+//     &[data-month="march"] {
+//         --j-accent: #2ea86b;
+//         --j-accent-bg: rgba(46, 168, 107, 0.08);
+//     }
+
+//     &[data-month="april"] {
+//         --j-accent: #e07b3a;
+//         --j-accent-bg: rgba(224, 123, 58, 0.08);
+//     }
+
+//     &[data-month="may"] {
+//         --j-accent: #d44f6e;
+//         --j-accent-bg: rgba(212, 79, 110, 0.08);
+//     }
+
+//     &[data-month="june"] {
+//         --j-accent: #b8922a;
+//         --j-accent-bg: rgba(184, 146, 42, 0.08);
+//     }
+
+//     &[data-month="july"] {
+//         --j-accent: #2aa8a8;
+//         --j-accent-bg: rgba(42, 168, 168, 0.08);
+//     }
+
+//     &[data-month="august"] {
+//         --j-accent: #6aa32e;
+//         --j-accent-bg: rgba(106, 163, 46, 0.08);
+//     }
+
+//     &[data-month="september"] {
+//         --j-accent: #d44040;
+//         --j-accent-bg: rgba(212, 64, 64, 0.08);
+//     }
+
+//     &[data-month="october"] {
+//         --j-accent: #a0662a;
+//         --j-accent-bg: rgba(160, 102, 42, 0.08);
+//     }
+
+//     &[data-month="november"] {
+//         --j-accent: #3a70b8;
+//         --j-accent-bg: rgba(58, 112, 184, 0.08);
+//     }
+
+//     &[data-month="december"] {
+//         --j-accent: #aa3a8a;
+//         --j-accent-bg: rgba(170, 58, 138, 0.08);
+//     }
+
+//     margin-bottom: 3.5rem;
+//     padding-bottom: 1rem;
+// }
+
+// // Dark mode: nudge the pale backgrounds up slightly
+// .darkmode .journal-month-block {
+//     &[data-month="january"] {
+//         --j-accent-bg: rgba(74, 127, 212, 0.14);
+//     }
+
+//     &[data-month="february"] {
+//         --j-accent-bg: rgba(155, 111, 232, 0.14);
+//     }
+
+//     &[data-month="march"] {
+//         --j-accent-bg: rgba(46, 168, 107, 0.14);
+//     }
+
+//     &[data-month="april"] {
+//         --j-accent-bg: rgba(224, 123, 58, 0.14);
+//     }
+
+//     &[data-month="may"] {
+//         --j-accent-bg: rgba(212, 79, 110, 0.14);
+//     }
+
+//     &[data-month="june"] {
+//         --j-accent-bg: rgba(184, 146, 42, 0.14);
+//     }
+
+//     &[data-month="july"] {
+//         --j-accent-bg: rgba(42, 168, 168, 0.14);
+//     }
+
+//     &[data-month="august"] {
+//         --j-accent-bg: rgba(106, 163, 46, 0.14);
+//     }
+
+//     &[data-month="september"] {
+//         --j-accent-bg: rgba(212, 64, 64, 0.14);
+//     }
+
+//     &[data-month="october"] {
+//         --j-accent-bg: rgba(160, 102, 42, 0.14);
+//     }
+
+//     &[data-month="november"] {
+//         --j-accent-bg: rgba(58, 112, 184, 0.14);
+//     }
+
+//     &[data-month="december"] {
+//         --j-accent-bg: rgba(170, 58, 138, 0.14);
+//     }
+// }
+
+// // --- h1: Month header ---
+// h1.journal-month-heading {
+//     display: flex;
+//     align-items: center;
+//     gap: 0.75rem;
+//     font-size: 0.8rem !important; // override Quartz h1 sizing
+//     font-weight: 600;
+//     letter-spacing: 0.05em;
+//     text-transform: uppercase;
+//     color: var(--j-accent);
+//     margin-top: 0 !important;
+//     margin-bottom: 1.75rem;
+//     padding-bottom: 0.6rem;
+//     border-bottom: 2px solid var(--j-accent);
+
+//     // Anchor icon Quartz injects — hide it or it looks odd in the pill row
+//     a.internal {
+//         display: none;
+//     }
+
+//     .journal-month-pill {
+//         display: inline-block;
+//         font-size: 0.7rem;
+//         font-weight: 700;
+//         letter-spacing: 0.1em;
+//         text-transform: uppercase;
+//         padding: 0.2rem 0.7rem;
+//         border-radius: 20px;
+//         background-color: var(--j-accent-bg);
+//         color: var(--j-accent);
+//         border: 1px solid var(--j-accent);
+//     }
+
+//     .journal-month-year {
+//         font-size: 0.75rem;
+//         font-weight: 400;
+//         opacity: 0.65;
+//         letter-spacing: 0.04em;
+//     }
+// }
+
+// // --- h2: Entry date + week badge ---
+// h2.journal-entry-heading {
+//     display: flex !important;
+//     align-items: center;
+//     gap: 0.5rem;
+//     font-size: 0.9rem !important;
+//     font-weight: 500;
+//     margin-top: 0 !important;
+//     margin-bottom: 0.6rem;
+//     border: none !important; // override any Quartz h2 border/underline
+//     padding: 0 !important;
+
+//     // Anchor icon — hide inside the badge row
+//     a.internal {
+//         display: none;
+//     }
+
+//     .journal-week-num {
+//         display: inline-flex;
+//         align-items: center;
+//         font-size: 0.65rem;
+//         font-weight: 700;
+//         letter-spacing: 0.08em;
+//         text-transform: uppercase;
+//         padding: 0.15rem 0.55rem;
+//         border-radius: 4px;
+//         background-color: var(--j-accent-bg);
+//         color: var(--j-accent);
+//         border: 1px solid var(--j-accent);
+//         font-family: var(--codeFont, monospace);
+//         flex-shrink: 0;
+//     }
+
+//     .journal-sep {
+//         color: var(--j-accent);
+//         opacity: 0.4;
+//         font-size: 0.75em;
+//     }
+
+//     .journal-entry-date {
+//         font-size: 0.9rem;
+//         font-weight: 500;
+//         color: var(--dark);
+//         font-variant-numeric: tabular-nums;
+//     }
+// }
+
+// // --- Entry block: left-border accent wrapping h2 + body ---
+// .journal-entry-block {
+//     padding: 0.6rem 0 0.6rem 1rem;
+//     border-left: 2px solid var(--j-accent);
+//     margin-bottom: 1.75rem;
+//     transition: background-color 0.15s ease;
+//     border-radius: 0 4px 4px 0;
+
+//     &:hover {
+//         background-color: var(--j-accent-bg);
+//     }
+
+//     // Body paragraphs
+//     p {
+//         font-size: 0.95rem;
+//         line-height: 1.75;
+//         margin-bottom: 0.5rem;
+//     }
+
+//     // Lists inside entries
+//     ul,
+//     ol {
+//         font-size: 0.92rem;
+//         line-height: 1.7;
+//         margin-top: 0.25rem;
+//     }
+// }
+
+// // --- h3: Sub-section labels (Action items, Decisions, etc.) ---
+// .journal-entry-block h3 {
+//     font-size: 0.72rem !important;
+//     font-weight: 700;
+//     letter-spacing: 0.07em;
+//     text-transform: uppercase;
+//     color: var(--j-accent) !important;
+//     margin-top: 0.9rem !important;
+//     margin-bottom: 0.35rem !important;
+//     opacity: 0.8;
+
+//     // Hide anchor on h3 too
+//     a.internal {
+//         display: none;
+//     }
+// }
+
+// ============================================================
+// JOURNAL PAGE STYLES
+// Scoped to .journal-month-block (emitted by JournalEntryInjector)
+// ============================================================
+
+// --- Month color tokens ---
+.journal-month-block {
+    --j-accent: var(--tertiary);
+    --j-accent-bg: rgba(130, 130, 130, 0.06);
+
+    &[data-month="january"] {
+        --j-accent: #4a7fd4;
+        --j-accent-bg: rgba(74, 127, 212, 0.08);
+    }
+
+    &[data-month="february"] {
+        --j-accent: #9b6fe8;
+        --j-accent-bg: rgba(155, 111, 232, 0.08);
+    }
+
+    &[data-month="march"] {
+        --j-accent: #2ea86b;
+        --j-accent-bg: rgba(46, 168, 107, 0.08);
+    }
+
+    &[data-month="april"] {
+        --j-accent: #e07b3a;
+        --j-accent-bg: rgba(224, 123, 58, 0.08);
+    }
+
+    &[data-month="may"] {
+        --j-accent: #d44f6e;
+        --j-accent-bg: rgba(212, 79, 110, 0.08);
+    }
+
+    &[data-month="june"] {
+        --j-accent: #b8922a;
+        --j-accent-bg: rgba(184, 146, 42, 0.08);
+    }
+
+    &[data-month="july"] {
+        --j-accent: #2aa8a8;
+        --j-accent-bg: rgba(42, 168, 168, 0.08);
+    }
+
+    &[data-month="august"] {
+        --j-accent: #6aa32e;
+        --j-accent-bg: rgba(106, 163, 46, 0.08);
+    }
+
+    &[data-month="september"] {
+        --j-accent: #d44040;
+        --j-accent-bg: rgba(212, 64, 64, 0.08);
+    }
+
+    &[data-month="october"] {
+        --j-accent: #a0662a;
+        --j-accent-bg: rgba(160, 102, 42, 0.08);
+    }
+
+    &[data-month="november"] {
+        --j-accent: #3a70b8;
+        --j-accent-bg: rgba(58, 112, 184, 0.08);
+    }
+
+    &[data-month="december"] {
+        --j-accent: #aa3a8a;
+        --j-accent-bg: rgba(170, 58, 138, 0.08);
+    }
+
+    margin-bottom: 3.5rem;
+    padding-bottom: 1rem;
+}
+
+.darkmode .journal-month-block {
+    &[data-month="january"] {
+        --j-accent-bg: rgba(74, 127, 212, 0.14);
+    }
+
+    &[data-month="february"] {
+        --j-accent-bg: rgba(155, 111, 232, 0.14);
+    }
+
+    &[data-month="march"] {
+        --j-accent-bg: rgba(46, 168, 107, 0.14);
+    }
+
+    &[data-month="april"] {
+        --j-accent-bg: rgba(224, 123, 58, 0.14);
+    }
+
+    &[data-month="may"] {
+        --j-accent-bg: rgba(212, 79, 110, 0.14);
+    }
+
+    &[data-month="june"] {
+        --j-accent-bg: rgba(184, 146, 42, 0.14);
+    }
+
+    &[data-month="july"] {
+        --j-accent-bg: rgba(42, 168, 168, 0.14);
+    }
+
+    &[data-month="august"] {
+        --j-accent-bg: rgba(106, 163, 46, 0.14);
+    }
+
+    &[data-month="september"] {
+        --j-accent-bg: rgba(212, 64, 64, 0.14);
+    }
+
+    &[data-month="october"] {
+        --j-accent-bg: rgba(160, 102, 42, 0.14);
+    }
+
+    &[data-month="november"] {
+        --j-accent-bg: rgba(58, 112, 184, 0.14);
+    }
+
+    &[data-month="december"] {
+        --j-accent-bg: rgba(170, 58, 138, 0.14);
+    }
+}
+
+// --- h1: Month header ---
+h1.journal-month-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.8rem !important;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--j-accent);
+    margin-top: 0 !important;
+    margin-bottom: 1.75rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--j-accent);
+
+    a.internal {
+        display: none;
+    }
+
+    .journal-month-pill {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 0.2rem 0.7rem;
+        border-radius: 20px;
+        background-color: var(--j-accent-bg);
+        color: var(--j-accent);
+        border: 1px solid var(--j-accent);
+    }
+
+    .journal-month-year {
+        font-size: 0.75rem;
+        font-weight: 400;
+        opacity: 0.65;
+        letter-spacing: 0.04em;
+    }
+}
+
+// --- Entry block: <details> wrapper ---
+details.journal-entry-block {
+    padding-left: 1rem;
+    border-left: 2px solid var(--j-accent);
+    margin-bottom: 1.5rem;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.15s ease;
+
+    // Expanded state bg
+    &[open] {
+        background-color: var(--j-accent-bg);
+        padding-bottom: 0.75rem;
+    }
+
+    // Body content padding when open
+    &[open]>*:not(summary) {
+        padding-right: 0.75rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.75;
+        margin-bottom: 0.5rem;
+        padding-left: 0.1rem;
+    }
+
+    ul,
+    ol {
+        font-size: 0.92rem;
+        line-height: 1.7;
+        margin-top: 0.25rem;
+    }
+
+    // h3 sub-sections inside an entry
+    h3 {
+        font-size: 0.72rem !important;
+        font-weight: 700;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: var(--j-accent) !important;
+        margin-top: 0.9rem !important;
+        margin-bottom: 0.35rem !important;
+        opacity: 0.8;
+
+        a.internal {
+            display: none;
+        }
+    }
+}
+
+// --- <summary>: the clickable date/week header ---
+summary.journal-entry-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 0.5rem 0.55rem 0;
+    cursor: pointer;
+    list-style: none; // hide default browser triangle
+    user-select: none;
+
+    // Hide the default marker in all browsers
+    &::-webkit-details-marker {
+        display: none;
+    }
+
+    &::marker {
+        display: none;
+    }
+
+    &:hover {
+        .journal-entry-date {
+            color: var(--j-accent);
+        }
+    }
+
+    .journal-week-num {
+        display: inline-flex;
+        align-items: center;
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.15rem 0.55rem;
+        border-radius: 4px;
+        background-color: var(--j-accent-bg);
+        color: var(--j-accent);
+        border: 1px solid var(--j-accent);
+        font-family: var(--codeFont, monospace);
+        flex-shrink: 0;
+    }
+
+    .journal-sep {
+        color: var(--j-accent);
+        opacity: 0.4;
+        font-size: 0.75em;
+    }
+
+    .journal-entry-date {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--dark);
+        font-variant-numeric: tabular-nums;
+        font-family: var(--headerFont, var(--codeFont, monospace));
+        transition: color 0.15s ease;
+    }
+
+    // Chevron — pushed to the right, rotates on open
+    .journal-entry-chevron {
+        margin-left: auto;
+        width: 0.9rem;
+        height: 0.9rem;
+        flex-shrink: 0;
+        opacity: 0.4;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+
+        // Draw a simple chevron via CSS border trick
+        display: inline-block;
+        border-right: 1.5px solid var(--j-accent);
+        border-bottom: 1.5px solid var(--j-accent);
+        transform: rotate(45deg); // pointing down = expanded
+    }
+}
+
+// Chevron points right when collapsed
+details.journal-entry-block:not([open]) summary.journal-entry-heading {
+    .journal-entry-chevron {
+        transform: rotate(-45deg);
+        opacity: 0.25;
+    }
+}
+
+/* Explorer collapse fixes */
+.explorer.collapsed {
+    flex: 0 1 auto !important;
+}
+
+.explorer.collapsed>.explorer-content {
+    display: none !important;
+}
+
+/* Sidebar layout, spacing and padding overrides (replicating v4 proportions) */
+@media all and not ($mobile) {
+    .page>#quartz-body .sidebar.left {
+        padding-top: 6rem !important;
+        /* keep aligned with default page header / breadcrumbs */
+        gap: 1rem !important;
+        /* default is 1.2rem, reduces gap between title, search/toolbar, and explorer */
+    }
+}
+
+/* Explorer title styling */
+.explorer button.desktop-explorer h2,
+.explorer button.mobile-explorer h2 {
+    font-size: 1rem !important;
+    /* make the main "Explorer" heading smaller */
+    font-weight: 600 !important;
+}
+
+/* Adjust search box width to prevent cramping toggle buttons */
+.left.sidebar .search {
+    max-width: 14rem !important;
+}
+
+.explorer button.desktop-explorer {
+    margin-top: 0.5rem;
+    /* Increase this value to push the heading further down */
+}
