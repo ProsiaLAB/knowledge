@@ -94,6 +94,7 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
+        <script src={joinSegments(baseDir, "static/citation-popover.js")}></script>
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
