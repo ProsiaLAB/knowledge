@@ -1,3 +1,3 @@
 ---
-title: "Notes, Projects, Reviews and Theses"
+title: Notes, Projects, and Theses
 ---
