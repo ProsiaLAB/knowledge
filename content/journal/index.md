@@ -1,4 +1,4 @@
 ---
-title: Journal
+title: Research Journal
 ---
 A journal documenting timeline of a project.
