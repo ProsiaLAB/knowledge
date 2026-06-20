@@ -999,182 +999,269 @@ details.journal-entry-block:not([open]) summary.journal-entry-heading {
     /* Increase this value to push the heading further down */
 }
 
-/* Domain Grid Cards */
-/* Domain Grid Cards */
+/* Domain Grid Cards - Base (Mobile First) */
 .domain-grid ul {
-  display: grid;
-  list-style: none;
-  padding: 0;
-  margin-top: 1.5rem;
-  border: none !important;
-  /* 1-column on mobile */
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-@media (min-width: 800px) {
-  .domain-grid ul {
-    /* 3x3 Grid */
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    height: 70vh;
-    min-height: 500px;
-    gap: 1rem;
-    transition: grid-template-columns 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), 
-                grid-template-rows 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-
-  /* When ANY column is hovered, expand it, shrink others */
-  .domain-grid ul:has(li:nth-child(3n + 1):hover) {
-    grid-template-columns: 2.5fr 1fr 1fr;
-  }
-  .domain-grid ul:has(li:nth-child(3n + 2):hover) {
-    grid-template-columns: 1fr 2.5fr 1fr;
-  }
-  .domain-grid ul:has(li:nth-child(3n + 3):hover) {
-    grid-template-columns: 1fr 1fr 2.5fr;
-  }
-
-  /* When ANY row is hovered, expand it, shrink others */
-  .domain-grid ul:has(li:nth-child(-n + 3):hover) {
-    grid-template-rows: 2.5fr 1fr 1fr;
-  }
-  .domain-grid ul:has(li:nth-child(n + 4):nth-child(-n + 6):hover) {
-    grid-template-rows: 1fr 2.5fr 1fr;
-  }
-  .domain-grid ul:has(li:nth-child(n + 7):hover) {
-    grid-template-rows: 1fr 1fr 2.5fr;
-  }
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    border: none !important;
+    gap: 0.75rem;
 }
 
 .domain-grid li {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  background-color: rgba(130, 130, 130, 0.05);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  box-sizing: border-box;
-  overflow: hidden;
-  list-style-type: none !important;
-  border-bottom: 1px solid var(--border) !important;
-  transition: background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
+    position: relative;
+    height: 120px;
+    /* Compact height for mobile list cards */
+    min-width: 0;
+    /* Prevents track snapping bugs in CSS grid */
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(130, 130, 130, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    list-style-type: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    transition: background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
 }
 
 /* Allow gradient overlay */
 .domain-grid li::before {
-  display: none !important;
+    display: none !important;
 }
 
 .domain-grid li::after {
-  content: "";
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 60%;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  z-index: 1; /* Above image, below text */
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 1;
+    /* Above image, below text */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
 }
 
-@media (min-width: 800px) {
-  .domain-grid li:hover {
+.domain-grid li:hover {
     background-color: rgba(137, 180, 250, 0.08);
     border-color: #89b4fa !important;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
     z-index: 10;
-  }
-  /* Show gradient overlay ONLY if there's an image, ensuring perfect legibility */
-  .domain-grid li:has(img):hover::after {
+}
+
+/* Show gradient overlay ONLY if there's an image, ensuring perfect legibility */
+.domain-grid li:has(img):hover::after {
     opacity: 1;
-  }
 }
 
 .domain-grid a.internal {
-  position: absolute;
-  top: 50%;
-  left: 1.5rem;
-  right: 1.5rem;
-  transform: translateY(-50%);
-  
-  background: transparent !important;
-  text-align: left;
-  text-decoration: none;
-  color: var(--dark);
-  font-family: var(--headerFont, "Inter", sans-serif);
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  letter-spacing: 0.01em;
-  
-  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-  z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    right: 1.5rem;
+    transform: translateY(-50%);
+
+    background: transparent !important;
+    text-align: left;
+    text-decoration: none;
+    color: var(--dark);
+    font-family: var(--headerFont, "Inter", sans-serif);
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 2;
 }
 
-@media (min-width: 800px) {
-  .domain-grid li:hover a.internal {
+/* Make the entire card clickable by using a massive pseudo-element clipped by the li's overflow: hidden */
+.domain-grid a.internal::after {
+    content: "";
+    position: absolute;
+    top: -1000px;
+    bottom: -1000px;
+    left: -1000px;
+    right: -1000px;
+    z-index: 1;
+}
+
+.domain-grid li:hover a.internal {
     top: 100%;
     transform: translateY(-100%);
     padding-bottom: 1.5rem;
-    font-size: 1.6rem; /* Slightly reduced so it's more legible and fits */
-    letter-spacing: -0.02em; /* Squeeze less so it's more legible */
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
     font-weight: 800;
     color: var(--tertiary);
-  }
-  
-  /* Force text white with strong shadow over image for legibility */
-  .domain-grid li:has(img):hover a.internal {
+}
+
+/* Smart text contrast (removed for light mode compatibility) */
+
+/* Intensify the text shadow on hover over an image */
+.domain-grid li:has(img):hover a.internal {
     color: #ffffff !important;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-  }
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
 }
 
 /* Styling for future card graphics as backgrounds */
 .domain-grid li img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.15;
-  border-radius: 0;
-  margin: 0;
-  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-  z-index: 0;
-  filter: grayscale(80%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    /* Lighter base opacity so black text remains highly legible */
+    border-radius: 0;
+    margin: 0;
+    transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 0;
+    filter: blur(8px);
+    /* Elegant glassmorphism blur instead of grey wash */
+    transform: scale(1.1) translateZ(0);
+    /* translateZ(0) forces hardware acceleration to prevent Safari/Chrome from dropping large images */
+    will-change: transform, filter, opacity;
+    /* Performance hint for heavy filters */
 }
 
-@media (min-width: 800px) {
-  .domain-grid li:hover img {
-    transform: scale(1.05);
-    opacity: 0.9;
-    filter: grayscale(0%);
-  }
+.domain-grid li:hover img {
+    transform: scale(1.15) translateZ(0);
+    /* Keep zooming in dynamically when hovered */
+    opacity: 0.95;
+    filter: blur(0px);
+    /* Snap into crystal clear focus on hover */
 }
 
 .domain-grid li p {
-  margin: 0; 
-  display: contents;
+    margin: 0;
+    display: contents;
 }
 
 /* Dark mode adjustments */
 html[saved-theme="dark"] .domain-grid li,
 .darkmode .domain-grid li {
-  background-color: rgba(180, 190, 254, 0.05);
+    background-color: rgba(180, 190, 254, 0.05);
 }
 
-@media (min-width: 800px) {
-  html[saved-theme="dark"] .domain-grid li:hover,
-  .darkmode .domain-grid li:hover {
+html[saved-theme="dark"] .domain-grid li:hover,
+.darkmode .domain-grid li:hover {
     background-color: rgba(137, 180, 250, 0.12);
     border-color: #b4befe !important;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-  }
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
 
-  html[saved-theme="dark"] .domain-grid li:hover a.internal:not(:has(img)),
-  .darkmode .domain-grid li:hover a.internal:not(:has(img)) {
+html[saved-theme="dark"] .domain-grid li:hover a.internal:not(:has(img)),
+.darkmode .domain-grid li:hover a.internal:not(:has(img)) {
     color: #b4befe;
-  }
+}
+
+/* Animatable CSS custom properties for grid track sizes */
+@property --grid-col-1 {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 33.34%;
+}
+
+@property --grid-col-2 {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 33.33%;
+}
+
+@property --grid-col-3 {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 33.33%;
+}
+
+@property --grid-row-1 {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 33.34%;
+}
+
+@property --grid-row-2 {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 33.33%;
+}
+
+@property --grid-row-3 {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 33.33%;
+}
+
+/* Domain Grid Cards - Desktop Grid & Magnification */
+@media (min-width: 800px) {
+    .domain-grid ul {
+        display: grid;
+        /* 3x3 Grid driven by smoothly-animatable custom properties */
+        grid-template-columns: var(--grid-col-1) var(--grid-col-2) var(--grid-col-3);
+        grid-template-rows: var(--grid-row-1) var(--grid-row-2) var(--grid-row-3);
+        height: 70vh;
+        min-height: 500px;
+        gap: 0;
+        /* Zero gap so the mouse never enters a dead zone between cards */
+        transition: --grid-col-1 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+            --grid-col-2 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+            --grid-col-3 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+            --grid-row-1 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+            --grid-row-2 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+            --grid-row-3 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .domain-grid li {
+        height: auto;
+        /* Reset fixed height so CSS Grid controls height */
+        margin: 6px;
+        /* Visual spacing between cards (replaces gap) */
+    }
+
+    /* Column expansion: which column is hovered */
+    .domain-grid ul:has(li:nth-child(3n + 1):hover) {
+        --grid-col-1: 55%;
+        --grid-col-2: 22.5%;
+        --grid-col-3: 22.5%;
+    }
+
+    .domain-grid ul:has(li:nth-child(3n + 2):hover) {
+        --grid-col-1: 22.5%;
+        --grid-col-2: 55%;
+        --grid-col-3: 22.5%;
+    }
+
+    .domain-grid ul:has(li:nth-child(3n + 3):hover) {
+        --grid-col-1: 22.5%;
+        --grid-col-2: 22.5%;
+        --grid-col-3: 55%;
+    }
+
+    /* Row expansion: which row is hovered */
+    .domain-grid ul:has(li:nth-child(-n + 3):hover) {
+        --grid-row-1: 55%;
+        --grid-row-2: 22.5%;
+        --grid-row-3: 22.5%;
+    }
+
+    .domain-grid ul:has(li:nth-child(n + 4):nth-child(-n + 6):hover) {
+        --grid-row-1: 22.5%;
+        --grid-row-2: 55%;
+        --grid-row-3: 22.5%;
+    }
+
+    .domain-grid ul:has(li:nth-child(n + 7):hover) {
+        --grid-row-1: 22.5%;
+        --grid-row-2: 22.5%;
+        --grid-row-3: 55%;
+    }
 }

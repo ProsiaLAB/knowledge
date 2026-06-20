@@ -6,15 +6,15 @@ Browse by domain:
 
 <div class="domain-grid">
 
-- [[tour/objects/index|Astrophysical Objects]]
-- [[tour/index|A Tour of Planet Formation]]
-- [[planets/index|Planets and Planetary Systems]]
-- [[observations/index|The Observation Toolkit]]
-- [[science/index|The Science of Planet Formation]]
-- [[tools/index|The Tools of the Trade]]
-- [[journal/index|Research Journal]]
-- [[reviews/index|Article Reviews]]
-- [[research/index|Notes, Theses, Retrospectives]]
+- ![[nustar.jpg]][[tour/objects/index|Astrophysical Objects]]
+- ![[wallpaper_trappist.jpeg]][[tour/index|A Tour of Planet Formation]]
+- ![[earth.jpg]][[planets/index|Planets and Planetary Systems]]
+- ![[wallpaper_spitzer.jpeg]][[observations/index|The Observation Toolkit]]
+- ![[edgeondisk.png]][[science/index|The Science of Planet Formation]]
+- ![[julia.jpeg]][[tools/index|The Tools of the Trade]]
+- ![[galilio_moons.jpg]][[journal/index|Research Journal]]
+- ![[nature.png]][[reviews/index|Article Reviews]]
+- ![[observatory.jpg]][[research/index|Notes, Theses, Retrospectives]]
 
 
 </div>
