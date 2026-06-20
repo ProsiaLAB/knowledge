@@ -1,3 +1,3 @@
 ---
-title: Notes, Projects, and Theses
+title: Notes, Theses, Retrospectives
 ---
