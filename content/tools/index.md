@@ -1,3 +1,3 @@
 ---
-title: "Algorithms and Methods"
+title: The Tools of the Trade
 ---
