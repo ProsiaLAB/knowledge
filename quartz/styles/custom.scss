@@ -298,15 +298,30 @@ a.data-footnote-backref {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
 
-    // Prevent the left sidebar sliver from bleeding into the viewport
-    .left.sidebar {
+
+@media (max-width: 800px) {
+    // Hide all items inside the left sidebar on mobile except the darkmode toggle
+    .left.sidebar .search,
+    .left.sidebar .reader-mode,
+    .left.sidebar .page-title,
+    .left.sidebar .spacer {
         display: none !important;
-        width: 0 !important;
-        overflow: hidden !important;
-        padding: 0 !important;
+    }
+
+    // Hide flex containers that don't contain darkmode
+    .left.sidebar > .flex-component:not(:has(.darkmode)) {
+        display: none !important;
+    }
+
+    .left.sidebar {
+        // Use space-between so the darkmode button and hamburger menu are spread out
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important; 
+        padding: 1rem 1rem 0 1rem !important;
         margin: 0 !important;
+        // DO NOT use overflow: hidden here, as it breaks the explorer dropdown menu
     }
 
     // Ensure the page body doesn't overflow horizontally
@@ -1202,7 +1217,7 @@ html[saved-theme="dark"] .domain-grid li:hover a.internal:not(:has(img)),
 }
 
 /* Domain Grid Cards - Desktop Grid & Magnification */
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
     .domain-grid ul {
         display: grid;
         /* 3x3 Grid driven by smoothly-animatable custom properties */

@@ -10,7 +10,7 @@ async function mouseEnterHandler(
   { clientX, clientY }: { clientX: number; clientY: number },
 ) {
   const link = (activeAnchor = this)
-  if (link.dataset.noPopover === "true" || link.closest('.domain-grid')) {
+  if (link.dataset.noPopover === "true") {
     return
   }
 
