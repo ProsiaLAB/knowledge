@@ -1281,3 +1281,21 @@ html[saved-theme="dark"] .domain-grid li:hover a.internal:not(:has(img)),
         --grid-row-3: 55%;
     }
 }
+
+// Math overflow fixes for mobile
+.math.math-display,
+mjx-container.MathJax[display="true"],
+.katex-display {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    display: block !important;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+mjx-container.MathJax[display="true"] > svg {
+    display: inline-block;
+    margin: 0 auto;
+    max-width: none !important;
+}
