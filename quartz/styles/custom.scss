@@ -6,7 +6,7 @@ img {
 }
 
 .page-title {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
 }
 
 article.popover-hint h1 {
@@ -301,6 +301,7 @@ a.data-footnote-backref {
 
 
 @media (max-width: 800px) {
+
     // Hide all items inside the left sidebar on mobile except the darkmode toggle
     .left.sidebar .search,
     .left.sidebar .reader-mode,
@@ -310,7 +311,7 @@ a.data-footnote-backref {
     }
 
     // Hide flex containers that don't contain darkmode
-    .left.sidebar > .flex-component:not(:has(.darkmode)) {
+    .left.sidebar>.flex-component:not(:has(.darkmode)) {
         display: none !important;
     }
 
@@ -318,7 +319,7 @@ a.data-footnote-backref {
         // Use space-between so the darkmode button and hamburger menu are spread out
         width: 100% !important;
         display: flex !important;
-        justify-content: space-between !important; 
+        justify-content: space-between !important;
         padding: 1rem 1rem 0 1rem !important;
         margin: 0 !important;
         z-index: 999 !important;
@@ -1294,7 +1295,7 @@ mjx-container.MathJax[display="true"],
     text-align: center;
 }
 
-mjx-container.MathJax[display="true"] > svg {
+mjx-container.MathJax[display="true"]>svg {
     display: inline-block;
     margin: 0 auto;
     max-width: none !important;

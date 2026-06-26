@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Research Notes
+  pageTitle: Planetes LAB
   pageTitleSuffix: ""
   enableSPA: false
   enablePopovers: true
