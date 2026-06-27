@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: planeteslab.github.io/knowledge
+  baseUrl: planeteslab.github.io
   ignorePatterns:
     - private
     - templates
