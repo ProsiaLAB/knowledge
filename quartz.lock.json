@@ -33,7 +33,7 @@
     },
     "citations": {
       "source": "./quartz/plugins/local/citations",
-      "resolved": "/Users/kmaitreys/Web/planeteslab.github.io/quartz/plugins/local/citations",
+      "resolved": "./quartz/plugins/local/citations",
       "commit": "local",
       "installedAt": "2026-06-27T03:51:31.933Z"
     },
@@ -87,7 +87,7 @@
     },
     "disable-popovers": {
       "source": "./quartz/plugins/local/disable-popovers",
-      "resolved": "/Users/kmaitreys/Web/planeteslab.github.io/quartz/plugins/local/disable-popovers",
+      "resolved": "./quartz/plugins/local/disable-popovers",
       "commit": "local",
       "installedAt": "2026-06-27T03:51:31.934Z"
     },
@@ -153,7 +153,7 @@
     },
     "journal-entry": {
       "source": "./quartz/plugins/local/journal-entry",
-      "resolved": "/Users/kmaitreys/Web/planeteslab.github.io/quartz/plugins/local/journal-entry",
+      "resolved": "./quartz/plugins/local/journal-entry",
       "commit": "local",
       "installedAt": "2026-06-27T03:51:31.934Z"
     },
@@ -201,13 +201,13 @@
     },
     "paper-preview": {
       "source": "./quartz/plugins/local/paper-preview",
-      "resolved": "/Users/kmaitreys/Web/planeteslab.github.io/quartz/plugins/local/paper-preview",
+      "resolved": "./quartz/plugins/local/paper-preview",
       "commit": "local",
       "installedAt": "2026-06-27T03:51:31.934Z"
     },
     "preserve-tag-case": {
       "source": "./quartz/plugins/local/preserve-tag-case",
-      "resolved": "/Users/kmaitreys/Web/planeteslab.github.io/quartz/plugins/local/preserve-tag-case",
+      "resolved": "./quartz/plugins/local/preserve-tag-case",
       "commit": "local",
       "installedAt": "2026-06-27T03:51:31.934Z"
     },
