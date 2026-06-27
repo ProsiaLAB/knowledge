@@ -1,5 +1,6 @@
 ---
-title: PlanetesLAB
+title: Knowledge
+tab_title: PlanetesLAB
 description: Repository for research notes
 ---
 Browse by domain:
