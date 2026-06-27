@@ -1,5 +1,5 @@
 ---
-title: Knowledge
+title: PlanetesLAB
 description: Repository for research notes
 ---
 Browse by domain:
