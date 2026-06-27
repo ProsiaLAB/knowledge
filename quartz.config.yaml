@@ -148,7 +148,7 @@ plugins:
   - source: github:quartz-community/favicon
     enabled: true
   - source: github:quartz-community/og-image
-    enabled: false
+    enabled: true
   - source: github:quartz-community/content-page
     enabled: true
   - source: github:quartz-community/folder-page
@@ -281,6 +281,11 @@ plugins:
     enabled: true
   - source: ./quartz/plugins/local/disable-popovers
     enabled: true
+  - source: ./quartz/plugins/local/mdbook-nav
+    enabled: true
+    layout:
+      position: afterBody
+      priority: 50
 layout:
   groups:
     toolbar:

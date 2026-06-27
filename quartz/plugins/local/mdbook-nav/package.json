@@ -1,0 +1,33 @@
+{
+  "name": "mdbook-nav",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    "./components": "./dist/components/index.js"
+  },
+  "scripts": {
+    "build": "esbuild components/index.tsx --bundle --platform=node --format=esm --outfile=dist/components/index.js --external:@quartz-community/types --external:fs --external:path --external:preact --banner:js=\"import { createRequire } from 'module'; const require = createRequire(import.meta.url);\""
+  },
+  "peerDependencies": {
+    "@quartz-community/types": "*",
+    "preact": "^10.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.2",
+    "typescript": "^5.0.0"
+  },
+  "quartz": {
+    "name": "mdbook-nav",
+    "displayName": "Mdbook Navigation",
+    "category": "component",
+    "defaultOrder": 50,
+    "components": {
+      "MdbookNav": {
+        "displayName": "Mdbook Navigation",
+        "defaultPosition": "afterBody",
+        "defaultPriority": 50
+      }
+    }
+  }
+}

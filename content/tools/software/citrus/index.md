@@ -1,9 +1,11 @@
 # `citrus`
 
+Rust implementation of LIME (**LI**ne **M**odelling **E**ngine), originally by [Brinch & Hogerheijde, 2010](https://ui.adsabs.harvard.edu/abs/2010A&A...523A..25B/abstract).
+
+- [Documentation](https://planeteslab.github.io/documentation/citrus/)
+- [Book](https://planeteslab.github.io/citrus/)
+- [GitHub](https://github.com/PlanetesLAB/citrus)
+
 ## Introduction
 
 This book walks through the implementation details of `citrus`.
-
-## Table of contents
-
-1. [Line Radiative Transfer](./tools/software/citrus/chapter_1.md)
